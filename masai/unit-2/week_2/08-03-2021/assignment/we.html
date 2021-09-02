@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #register >div {
+            padding: 25px;
+            width: 350px;
+            height: 400px;
+            margin: 50px;
+        }
+        #register {
+            width: 1200px;
+            margin: auto;
+        }
+        label, input {
+            display: block;
+        }
+        .reg-form {
+            float: left;
+        }
+        .reg-form input {
+            border: 1px solid black;
+            width: 300px;
+            font-size: 32px;
+        }
+        .reg-form label {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        input + label {
+            margin-top: 30px;
+        }
+        .reg-form input + p {
+            margin: 4px;
+            color: red;
+        }
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
+        .reg-info {
+            width: 200px;
+            height: auto;
+            background-color: black;
+            color: white;
+            float: right;
+        }
+        .reg-info > p:nth-child(odd) {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .reg-info > p:nth-child(even) {
+            font-size: 32px;
+            margin-top: 2px;
+            margin-bottom: 24px;
+        }
+        .reg-info > p:nth-child(2) {
+            font-size: 48px;
+        }
+        #menu{
+            margin: auto;
+            padding: 25px;
+            width: 450px;
+            height: 650px;
+            background-color: #333333;
+            font-size: 25px;
+            text-align: center;
+            color: white;
+        }
+        button {
+            width: 400px;
+            height: 50px;
+            border-radius: 25px;
+            color: white;
+            background-color: crimson;
+            margin: auto;
+            font-size: 20px;
+        }
+        .divider {
+            margin: 40px auto;
+            background-color: white;
+            height: 4px;
+            border-radius: 2px;
+            width: 100px;
+        }
+        #menu > p:nth-child(3n+4) {
+            color: crimson;
+            line-height: 0.4;
+        }
+        #menu > p:nth-child(3n+3) {
+            line-height: 2;
+        }
+        #menu > p:nth-child(1) {
+            line-height: 0.2;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="register">
+        <div class="reg-form">
+            <form>
+                <label>Name</label>
+                <input type="text" />
+                <label>Email</label>
+                <input type="text" />
+                <label>Mobile</label>
+                <input type="text" />
+                <p>Enter a valid mobile number</p>
+                <input type="submit" value="REGISTER">
+            </form>
+        </div>
+        <div class="reg-info">
+            <p>NAME</p>
+            <p>MASAI</p>
+            <p>EMAIL</p>
+            <p>emali@masai.com</p>
+            <p>Mobile</p>
+            <p>9869979045</p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="menu">
+            <p>Today Sun, 26th Apr</p>
+            <p>Schedule - 7:00 AM onwards</p>
+            <p>Parathe Sharathe with</p>
+            <p>Chef Archana Doshi</p>
+            <div class="divider"></div>
+            <p>Spices and Immunity with</p>
+            <p>Nutrition Expert Manasa Rajan</p>
+            <div class="divider"></div>
+            <p>Postman Vegetables with</p>
+            <p>Chef Jason D'Souza</p>
+            <button>Sign up now</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

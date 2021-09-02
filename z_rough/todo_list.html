@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <h3 id="counts"></h3>
+    <input id="inp" type="text">
+    <button id="btn">ADD</button>
+    <div id="mainDiv"></div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var mainDiv = document.getElementById("mainDiv"); 
+    var counter = 1;
+    var nums = 0;
+    function deleteIt(id){
+        console.log(id)
+        id.remove();
+        nums--;
+        document.getElementById("counts").textContent = nums;
+    }
+    function toggle(id){
+        if(id.textContent === "Not Done"){
+            id.textContent = "Done"
+        }else{
+            id.textContent = "Not Done"
+        }
+    }
+    
+    function addData(){
+        var inpValue = document.getElementById("inp").value;
+        var todoItem = `<div id="itemNo${counter}">
+        <p id="paraNo${counter}"> ${inpValue}</p>
+        <button onclick="deleteIt(itemNo${counter})">Delete</button>
+        <button id="btnNo${counter}" onclick="toggle(btnNo${counter})" >Not Done</button>
+        </div>`;
+        mainDiv.innerHTML += todoItem;
+        counter++;
+        document.getElementById("inp").value = '';
+        nums++;
+        document.getElementById("counts").textContent = nums;
+    }
+    btn.addEventListener("click", addData)
+</script>
+</html>

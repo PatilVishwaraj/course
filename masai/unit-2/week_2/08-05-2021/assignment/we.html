@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+        }
+        .row > div {
+            margin: 10px;
+            height: 150px;
+            flex-basis: 150px;
+            background-color: teal;
+            border-radius: 6px;
+        }
+        .flex-fill {
+            flex-grow: 1;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(4, 200px);
+            gap: 20px;
+        }
+        #grid > div {
+            background-color: teal;
+            border-radius: 4px;
+        }
+        #grid > div:nth-child(8),
+        #grid > div:nth-child(9) {
+            grid-row-start: 3;
+
+        }
+        #grid > div:nth-child(10) {
+            grid-row-start: 4;
+        }
+        #template {
+            display: grid;
+            gap: 20px;
+            font-size: 40px;
+        }
+        #top {
+            background-color: yellow;
+            height: 100px;
+            grid-area: tbox;
+        }
+        #left {
+            background-color: green;
+            height: 400px;
+            grid-area: lbox;
+        }
+        #right {
+            background-color: red;
+            height: 400px;
+            grid-area: rbox;
+        }
+        @media screen and (max-width:600px) {
+            #template {
+                grid-template: 'tbox'
+                                'rbox'
+                                'lbox';
+            }
+        }
+        @media screen and (min-width: 600px) {
+            #template {
+                grid-template: 'tbox tbox'
+                                'lbox rbox' ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 1st part -->
+    <div class="row">
+        <div class="flex-fill"></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="row">
+        <div></div>
+        <div class="flex-fill"></div>
+        <div></div>
+    </div>
+    <div class="row">
+        <div></div>
+        <div></div>
+        <div class="flex-fill"></div>
+    </div>
+    <!-- 2nd part -->
+    <div id="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- 3rd part -->
+    <div id="template">
+        <div id="top">TOP</div>
+        <div id="left">LEFT</div>
+        <div id="right">RIGHT</div>
+    </div>
+</body>
+</html>
