@@ -1,4 +1,7 @@
 function traverseZ(n, matrix) {
+  if (n==1) {
+    console.log(matrix[0][0])
+  } else {
     var line1 = []
     var line2 = []
     var line3 = []
@@ -10,22 +13,28 @@ function traverseZ(n, matrix) {
       }
     }
     console.log(line1.join(" "),line2.join(" "),line3.join(" "))
+  }
 }
 
 function runProgram(input) {
-    var array = input.split("\n")
+    var array = input.trim().split("\n")
     for (let i = 1; i < array.length; i+=n+1) {
         var n =  Number(array[i])
         var matrix = []
         for (let j = i+1; j <= i+n; j++) {
-            matrix.push(array[j].split(" ").map(Number))
+            matrix.push(array[j].trim().split(" ").map(Number))
         }
         traverseZ(n, matrix)
     }
   }
   
   if (process.env.USERNAME === 'PC') {
-    runProgram(`1\n5\n1 2 3 4 5\n6 7 8 9 10\n11 12 13 14 15\n16 17 18 19 20\n21 22 23 24 25`);
+    runProgram(`1
+    3
+    1 2 3
+    4 5 6
+    7 8 9
+    `);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
