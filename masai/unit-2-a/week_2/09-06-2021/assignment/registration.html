@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        #register >div {
+            width: 400px;
+            height: 400px;
+            padding: 20px 20px;
+            float: left;
+            margin: 50px;
+        }
+        #register {
+            width: 1200px;
+            margin: auto;
+        }
+        label, input {
+            display: block;
+        }
+        .reg-form input {
+            border: 1px solid black;
+            width: 300px;
+            font-size: 32px;
+        }
+        .reg-form label {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        input + label {
+            margin-top: 30px;
+        }
+        .reg-form input + p {
+            margin: 4px;
+            color: red;
+        }
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+        }
+        .reg-info {
+            background-color: black;
+            color: white;
+            float: right;
+            border: 1px solid black;
+        }
+        .reg-info > p:nth-child(odd) {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .reg-info > p:nth-child(even) {
+            font-size: 32px;
+            margin-top: 2px;
+            margin-bottom: 24px;
+        }
+        .reg-info > p:nth-child(2) {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div id="register">
+        <div class="reg-form">
+            <form>
+                <label>Name</label>
+                <input type="text" />
+                <label>Email</label>
+                <input type="text" />
+                <label>Mobile</label>
+                <input type="text" />
+                <p>Enter a valid mobile number</p>
+                <input type="submit" value="REGISTER">
+            </form>
+        </div>
+        <div class="reg-info">
+            <p>NAME</p>
+            <p>MASAI</p>
+            <p>EMAIL</p>
+            <p>emali@masai.com</p>
+            <p>Mobile</p>
+            <p>9869979045</p>
+        </div>
+    </div>
+</body>
+</html>
