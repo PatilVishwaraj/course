@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard</title>
+    <style>
+        #hero {
+            width: 20%;
+            border-radius: 5px;
+            background-color: wheat;
+            border: 1px solid orange;
+            margin: auto;
+        }
+        #clear {
+            margin: 10px;
+        }
+        #display {
+            background-color: white;
+            border-radius: 3px;
+            margin: 10px;
+            overflow-wrap: break-word;
+        }
+        .last {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <h1 id="display"></h1>
+        <div>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+        </div>
+        <div class="last">
+            <button id="clear" onclick="clearD()">Clear</button>
+        </div>
+    </div>
+    <script>
+        var output = "";
+        function press(num) {
+            output = output + num
+            document.getElementById("display").textContent = output;
+        }
+        function clearD() {
+            console.log("clear")
+            output = ""
+            document.getElementById("display").textContent = output;
+        }
+    </script>
+</body>
+</html>

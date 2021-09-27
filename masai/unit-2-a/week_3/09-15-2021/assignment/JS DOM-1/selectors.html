@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button onclick="ch1()">Change H1</button>
+        <button onclick="ch3()">Change H3</button>
+        <button onclick="ch5()">Change H5</button>
+        <button onclick="cg()">Change Green</button>
+        <button onclick="cr()">Change Red</button>
+        <button onclick="cb()">Change Blue</button>
+        <script>
+            function ch1() {
+                var h1s = document.querySelectorAll('h1')
+                h1s[0].style.color = "red"
+            }
+            function ch3() {
+                var h3s = document.querySelectorAll('h3')
+                for (let i = 0; i < h3s.length; i++) {
+                    h3s[i].style.color = "green"
+                    
+                }
+            }
+            function ch5() {
+                var h5s = document.querySelectorAll('h5')
+                for (let i = 0; i < h5s.length; i++) {
+                    h5s[i].style.color = "blue"
+                    
+                }
+            }
+            function cg(className) {
+                var items = document.querySelectorAll("."+className)
+                for (let i = 0; i < items.length; i++) {
+                    items[i].style.color = className
+                    
+                }
+            }
+        </script>
+</body>
+</html>
