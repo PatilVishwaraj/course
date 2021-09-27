@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+         #newdata{
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-gap: 5%;
+        }
+        img {
+            width: 40%;
+            height: 50%;
+
+        }
+        #newdata div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            margin-bottom: 50PX;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cart Items</h1>
+    <h1 id="total"></h1>
+    <h1 id="items"></h1>
+    <button onclick="payment()">Make Payment</button>
+    <div id="newdata"></div>
+   
+    <script>
+        var Mysheos=JSON.parse(localStorage.getItem("cart"));
+        var items=document.getElementById("items");
+       items.textContent=`Total Products - ${Mysheos.length}`;
+       function showProduct(){  
+        var data_div=document.getElementById("newdata");
+        var total=0;
+        Mysheos.forEach(function (product) {
+            var div=document.createElement("div");
+            var p_name=document.createElement("h2");
+            p_name.innerText=product.name;
+            var p_price=document.createElement("p");
+            p_price.innerText=Number(product.price);
+            var image=document.createElement("img");
+            image.src=product.image;
+            var btn=document.createElement("button");
+            btn.innerHTML="remove from cart";
+            btn.onclick= function () {
+              addtocart(product);
+            }
+            div.append(image,p_name,p_price,btn)
+            data_div.append(div);
+
+            total = total + Number(product.price);
+           
+        
+        }); 
+        let total_h1=document.getElementById("total");
+        total_h1.innerHTML=`Total Price - ${total} Rs`;
+
+        // used to remove from cart by using event
+        function addtocart(Product){
+            var parent=event.target.parentNode;
+            parent.remove();
+            remove(parent)
+        }
+        // it used to remove from cart
+        function remove(p){
+            var cart_data=JSON.parse(localStorage.getItem("cart"));
+          cart_data.pop(p) 
+          localStorage.setItem("cart",JSON.stringify(cart_data));
+          location.reload()
+        }  
+    }
+    showProduct()  
+    function payment() {
+        setTimeout(function() {
+         alert("payment successful"); 
+        }, 2000);   
+    }
+
+    </script>
+    
+</body>
+</html>
