@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zigzag</title>
+    <style>
+        #Hero {
+            width: 60%;
+            margin: auto;
+        }
+        .d1, .d2, .d3 {
+            display: flex;
+            justify-items: stretch;
+        }
+        .box {
+            background-color: teal;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .grow {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="Hero">
+        <div class="d1">
+            <div class="box"></div>
+            <div class="box grow"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d2">
+            <div class="box grow"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d3">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box grow"></div>
+        </div>
+    </div>
+</body>
+</html>

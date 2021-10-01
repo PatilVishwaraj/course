@@ -3,19 +3,26 @@ function findGreaterArray(n, array) {
   var ans = []
   for (let i = 0; i < n-1; i++) {
     for (let j = i+1; j < n; j++) {
-      if (array[i]<array[j]) {
-        ans.push(array[j])
+      // if (array[i]<stack[stack.length-1]) {
+      //   console.log("hi")
+      //   ans.push(stack[stack.length-1])
+      // } else 
+      if (stack.length==0) {
+        ans.push(array[j]) 
         if (stack[stack.length-1]<array[j]) {
           stack.push(array[j])
         }
+        break
+      } else if (array[i]<array[j]){
+      
       }
       console.log(stack)
-      console.log(ans)
+      // console.log(ans)
       console.log("=====")
     }
   }
   ans.push(-1)
-  // console.log(ans.join(' '))
+  console.log(ans)
 }
 function runProgram(input) {
   input = input.trim().split('\n')

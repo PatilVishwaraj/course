@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Hero {
+            width: 50%;
+            margin: auto;
+        }
+        .box {
+            background-color: teal;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .d1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+        .d2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        }
+        .d3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+
+        }
+        .d4 {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="Hero">
+        <div class="d1">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d2">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d3">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="d4">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>

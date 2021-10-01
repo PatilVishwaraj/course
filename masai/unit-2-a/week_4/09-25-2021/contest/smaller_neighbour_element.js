@@ -3,8 +3,7 @@ function runProgram(input) {
   var n = +input[0];
   var array = input[1].trim().split(" ").map(Number);
   var ans = [-1];
-  var stack = [];
-  stack.push(array[0]);
+  var stack = [array[0]];
   for (let i = 1; i < n; i++) {
     for (let j = stack.length - 1; j >= 0; j--) {
       if (stack[j] < array[i]) {
