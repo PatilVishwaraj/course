@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="txt">Change the buttons text color random value</h1>
+    <button onclick="cg1(event)">Click here to change color</button>
+    <button onclick="cg2(event)">Click to change random color </button>
+  </body>
+  <script>
+    var text = document.querySelector(".txt");
+    var arr = ["red", "blue", "green", "yellow", "pink", "gray"];
+    var count = 0;
+    function cg1() {
+        document.getElementById('txt').style.color= "teal";
+    }
+    function cg2() {
+        document.getElementById('txt').style.color= arr[count];
+        count++
+        count = count%7
+    }
+  </script>
+</html>

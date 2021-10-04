@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <style>
+        .main{
+            width: 200px;
+            margin: auto;
+        }
+        h1{
+            width: 100px;
+            height: 60px;
+            text-align:center;
+            padding-top: 25px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        button{
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="main">
+    <h1 id="display"></h1>
+    <button onclick="check()">throw Dice</button>
+   </div>
+    <script>
+        function check(){
+            var massage=document.createElement("p");
+            var num=Math.round(Math.random()*10);
+            if(num==1){
+                display.textContent=num;
+                display.style.background= "red";
+            }
+            else if(num==2){
+                display.textContent=num;
+                display.style.background= "skyblue";
+            }
+            else if(num==3){
+                display.textContent=num;
+                display.style.background= "violet";
+            }
+            else if(num==4){
+                display.textContent=num;
+                display.style.background= "purple";
+            }
+            else if(num==5){
+                display.textContent=num;
+                display.style.background= "aqua";
+            }
+            else if(num==6){
+                display.textContent=num;
+                display.style.background= "green";
+            }
+            else if(num==7){
+                display.textContent=num-1;
+                display.style.background= "green";
+            }
+            else if(num==8){
+                display.textContent=num-3;
+                display.style.background= "aqua";
+            }
+            else if(num==9){
+                display.textContent=num-5;
+                display.style.background= "purple";
+            }
+            else{
+                display.textContent="1";
+                display.style.background= "red";
+            }
+               console.log(num)
+        }
+    </script>
+    
+</body>
+</html>

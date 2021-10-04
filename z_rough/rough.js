@@ -1,6 +1,6 @@
 function newUser(event) {
     event.preventDefault();
-
+    let user
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
     let mail = document.getElementById("email").value;

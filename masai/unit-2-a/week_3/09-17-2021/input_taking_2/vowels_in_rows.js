@@ -1,10 +1,30 @@
 function runProgram(input) {
-  input = input.trim().split('\n').map(Number)
-
+  input = input.trim().split("\n");
+  var [n, m] = input[0].trim().split(" ").map(Number);
+  for (let i = 1; i <= n; i++) {
+    var ans = "No";
+    var row = input[i].trim().split(" ");
+    for (let j = 0; j < m; j++) {
+      if (
+        row[j] == "a" ||
+        row[j] == "e" ||
+        row[j] == "i" ||
+        row[j] == "o" ||
+        row[j] == "u"
+      ) {
+        ans = "Yes";
+        break;
+      }
+    }
+    console.log(ans);
+  }
 }
 
 if (process.env.USERNAME === `PC`) {
-  runProgram(``);
+  runProgram(`3 2
+    a b
+    c d
+    e f`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

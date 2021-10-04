@@ -27,9 +27,9 @@
         <button onclick="ch1()">Change H1</button>
         <button onclick="ch3()">Change H3</button>
         <button onclick="ch5()">Change H5</button>
-        <button onclick="cg()">Change Green</button>
-        <button onclick="cr()">Change Red</button>
-        <button onclick="cb()">Change Blue</button>
+        <button onclick="cg('green')">Change Green</button>
+        <button onclick="cg('red')">Change Red</button>
+        <button onclick="cg('blue')">Change Blue</button>
         <script>
             function ch1() {
                 var h1s = document.querySelectorAll('h1')
@@ -51,9 +51,9 @@
             }
             function cg(className) {
                 var items = document.querySelectorAll("."+className)
+                    console.log(items)
                 for (let i = 0; i < items.length; i++) {
                     items[i].style.color = className
-                    
                 }
             }
         </script>

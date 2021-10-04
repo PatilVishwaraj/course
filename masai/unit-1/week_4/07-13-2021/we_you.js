@@ -65,7 +65,6 @@ var step2 = []
 step1.forEach(function(el) {
     step2.push(el**3)
 })
-
 var ans1 = step2.reduce(function(ac, el) {
     ac += el
     return ac

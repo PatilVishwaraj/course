@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1 id="txt">The buttons color changes to a random value when it is clicked! But only two times!</h1>
+  <button onclick="cg()">Click here to change my color!</button>
+  <script>
+    var text = document.querySelector(".txt");
+    var arr = ["red", "yellow"];
+    var count = 0;
+    function cg() {
+        document.getElementById('txt').style.color= arr[count];
+        count++
+    }
+  </script>
+</body>
+</html>

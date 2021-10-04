@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <style>
+        button{
+            margin: auto;
+            margin-left: 90px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: rgb(185, 255, 183);
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            width: 1000px;
+            height: 80px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgb(193, 228, 252);
+            font-size: 17px;
+            margin: auto;
+        }
+        h1{
+            background-color: white;
+            padding: 10px;
+            width: 200px;
+            border-radius: 20px;
+            margin-left: 250px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="Objects(),change()">objects</button>
+    <button onclick="Arrays(),change()">Arrays</button>
+    <button onclick="Functions(),change()">Functions</button>
+    <button onclick="Strings(),change()">Strings</button>
+    <button onclick="Numbers(),change()">Numbers</button>
+    <button onclick="nul(),change()">null</button>
+    <button onclick="undefine(),change()">undefined</button>
+    <script>
+        function Objects(){
+            var name=document.createElement("h1");
+             name=document.createElement("h1")
+            name.innerText="Objects"
+            var info=document.createElement("p");
+            document.body.appendChild(name);
+            info.innerText="In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics."
+            document.body.appendChild(info)
+        }
+        function Arrays(){
+            var name=document.createElement("h1");
+            name.innerText="Arrays"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of elements and access them by a single variable. Unlike most languages where array is a reference to the multiple variable, in JavaScript array is a single variable that stores multiple elements."
+            document.body.appendChild(info)
+        }
+        function Functions(){
+            var name=document.createElement("h1");
+            name.innerText="Functions"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it."
+            document.body.appendChild(info)
+
+        }
+        function Strings(){
+            var name=document.createElement("h1");
+            name.innerText="Strings"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="A JavaScript string stores a series of characters like 'John Doe'. A string can be any text inside double or single quotes: let carName1 = ''Volvo XC60''; let carName2 = 'Volvo XC60'; String indexes are zero-based: The first character is in position 0, the second in 1, and so on."
+            document.body.appendChild(info)
+        } 
+        function Numbers(){
+            var name=document.createElement("h1");
+            name.innerText="Numbers"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="The Number constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the Number() function.A number literal like 37 in JavaScript code is a floating-point value, not an integer. There is no separate integer type in common everyday use. (JavaScript now has a BigInt type, but it was not designed to replace Number for everyday uses. 37 is still a Number, not a BigInt."
+            document.body.appendChild(info)
+        } 
+        function undefine(){
+            var name=document.createElement("h1");
+            name.innerText="undefined"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined is the primitive value undefined.A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned."
+            document.body.appendChild(info)
+        } 
+        function nul(){
+            var name=document.createElement("h1");
+            name.innerText="null"
+            document.body.appendChild(name);
+            var info=document.createElement("p");
+            info.innerText="The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values and is treated as falsy for boolean operations.The value null is written with a literal: null. null is not an identifier for a property of the global object, like undefined can be. Instead, null expresses a lack of identification, indicating that a variable points to no object. In APIs, null is often retrieved in a place where an object can be expected but no object is relevant."
+            document.body.appendChild(info)
+        } 
+        function change(){
+            var arr= [ "red", "green", "blue", "yellow", "violet","chocolate","purple","orange","aqua","navy"];
+            var num=Math.round(Math.random()*10)
+            document.body.style.background= arr[num];
+        }
+    </script>
+    
+</body>
+</html>
