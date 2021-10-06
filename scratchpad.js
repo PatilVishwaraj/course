@@ -12,4 +12,22 @@
 
 
 
+function fastpow(a, b, m) {
+	if(b == 1) {
+		return a;
+  } else if(b % 2){ // is odd
+  	return (a * fastpow(a, b - 1, m)) % m
+  } else{
+  	return fastpow((a * a) % m, b / 2, m);
+  }
+}
 
+console.log(fastpow(263, 10000001, (1000000000+7)));
+
+
+
+// 263 10000001
+// Expected Output
+// 892715222
+// Output
+// 172874702

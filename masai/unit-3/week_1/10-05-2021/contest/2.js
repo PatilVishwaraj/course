@@ -1,27 +1,30 @@
-function GCD() {
-    
+function selectBalls(n, m, arr) {
+    var count = 0
+    for (let i = 0; i < n; i++) {
+        for (let j = i+1; j < n ; j++) {
+            if (arr[i]==arr[j] && i!==j) {
+                count++
+            }
+        }
+    }
+    console.log(count)
 }
-
-function prod() {
-    
-}
-
-
 function runProgram(input) {
     input = input.trim().split('\n')
-    var mod = 1000000000+7
-    for (let i = 1; i < input.length; i+=2) {
-        var n = +input[i]
-        var arr = input[i+1].trim().split(' ').map(Number)
-        console.log(n, arr)
+    var [n, m] = input[0].trim().split(' ').map(Number)
+    var arr = input[1].trim().split(' ').map(Number)
+    var n = arr.length
+    for (let i = 0; i < n; i++) {
+        var temp = arr[i]
+        arr.splice(i, 1)
+        selectBalls(n, m, arr)
+        arr.splice(i, 0, temp)
     }
-
   }
   
   if (process.env.USERNAME === `PC`) {
-    runProgram(`1
-    2
-    2 6`);
+    runProgram(`5 3
+    1 1 1 2 2`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding(`ascii`);

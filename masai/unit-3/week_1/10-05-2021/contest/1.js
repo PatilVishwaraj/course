@@ -1,27 +1,18 @@
-function GCD() {
-    
-}
-
-function prod() {
-    
-}
-
-
 function runProgram(input) {
     input = input.trim().split('\n')
-    var mod = 1000000000+7
-    for (let i = 1; i < input.length; i+=2) {
-        var n = +input[i]
-        var arr = input[i+1].trim().split(' ').map(Number)
-        console.log(n, arr)
+    for (let i = 1; i < input.length; i++) {
+        var [candies, n, start] = input[i].trim().split(' ').map(Number);
+        var ans = (start+candies-1)%n
+        console.log(ans)
     }
-
   }
-  
   if (process.env.USERNAME === `PC`) {
-    runProgram(`1
-    2
-    2 6`);
+    runProgram(`5
+    3 8 8
+    9 5 7
+    2 9 6
+    3 8 2
+    7 5 7`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding(`ascii`);
