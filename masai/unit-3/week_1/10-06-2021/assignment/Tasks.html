@@ -33,14 +33,18 @@
     <div id="Hero">
         <label for="task">Enter new task here:</label><br>
         <input id="Task_ip" name="task" type="text" placeholder="Task">
-        <button>Add Task</button>
-        <div class="tasks">
+        <button onclick="AddTask()">Add Task</button>
+        <hr>
+        <div class="List">
 
         </div>
     </div>
 </body>
 <script>
     function AddTask() {
+        var task = document.getElementById("Task_ip").value
+        var task_div = document.getElementById("List")
+        
         
     }
 </script>
