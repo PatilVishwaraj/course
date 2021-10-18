@@ -8,7 +8,7 @@
         let newdata = data.PromiseResult
         // console.log(Object.keys(data))
         console.log(data)
-        console.log(newdata)
+        console.log(articles[0])
         
     }
     catch {
