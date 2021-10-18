@@ -45,9 +45,12 @@
             border: 1px solid blue;
         }
         .left_box {
-            height: 25px;
-            width: 100%;
-            font-size: large;
+            margin: 3px 10px 3px 0;
+            /* width: 100%; */
+            font-size:x-large;
+        }
+        #search_box {
+            height: 50px;
         }
     </style>
 </head>
@@ -69,23 +72,5 @@
     <div id="mid"></div>
     <div id="right"></div>
 </body>
-<script>
- async function getNews() {
-     try {
-         let newsDisplay = document.getElementById("mid")
-         let search = document.getElementById("search_box").value
-
-         let res = await fetch(`https://newsapi.org/v2/everything?q=olympic&apiKey=2c731ae69c974625842c83244e133b45`)
-         let data = res.json()
-         let datanew = data.search
-         console.log(datanew)
-        //  ${search}
-     }
-     catch {
-         
-     }
-    //  2c731ae69c974625842c83244e133b45
-    // 
- }
-</script>
+<script src="scripts/home.js"></script>
 </html>
