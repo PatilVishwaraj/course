@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css:build": "tailwind build style.css -o ./build/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "tailwindcss": "^2.2.19"
-  },
-  "script": {
-    "build-css": "tailwindcss build style.css -o
+  }
+}
