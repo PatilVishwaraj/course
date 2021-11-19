@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+        }
+        #left {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 20%;
+            border: 1px solid black;
+        }
+        #mid {
+            height: 100%;
+            width: 60%;
+            border: 1px solid red;
+        }
+        #right {
+            height: 100%;
+            width: 20%;
+            border: 1px solid green;
+        }
+        .news {
+            display: flex;
+        }
+        .news_t1 {
+            width: 33%;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        .news_t2 {
+            width: 33%;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        .news_t3 {
+            width: 33%;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        .left_box {
+            margin: 3px 10px 3px 0;
+            /* width: 100%; */
+            font-size:x-large;
+        }
+        #search_box {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <button id="search_btn" onclick="getNews()" autocomplete="off">Search</button>
+        <input id="search_box" type="search" name="search" placeholder="Search TechCrunch">
+        <div class="left_box">Disrupt</div>
+        <div class="left_box">Startups</div>
+        <div class="left_box">Videos</div>
+        <div class="left_box">Audio</div>
+        <div class="left_box">Newsletters</div>
+        <div class="left_box">TechCrunch+</div>
+        <div class="left_box">EC-1s</div>
+        <div class="left_box">Advertise</div>
+        <div class="left_box">Events</div>
+        <div class="left_box">More</div>
+    </div>
+    <div id="mid"></div>
+    <div id="right"></div>
+</body>
+<script src="scripts/home.js"></script>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Engine</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: rgb(0 213 255 / 39%);
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        .main {
+            max-width: 100%;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 2);
+        }
+
+        .left {
+            text-align: left;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 25px;
+            color: rgb(255, 0, 0);
+            letter-spacing: 1px;
+        }
+
+        .right {
+            float: right;
+            display: flex;
+            padding-bottom: 15px;
+        }
+
+        .right input {
+            border-radius: 22px;
+            font-size: 20px;
+            border-style: none;
+            box-shadow: 3px 3px 0px rgb(255, 0, 0);
+            border: 0.1px solid rgb(71, 71, 87);
+            height: 35px;
+            width: 250px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-right: 10px;
+        }
+
+        .foo {
+            padding-left: 12px;
+        }
+
+        .right button {
+            border-radius: 22px;
+            border-style: none;
+            box-shadow: 3px 3px 0px rgb(255, 0, 0);
+            border: 0.1px solid rgb(94, 94, 105);
+            font-size: 15px;
+            width: 125px;
+            height: 36px;
+            font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .right button:hover{
+            background-color: turquoise;
+            color: white;
+        }
+
+        #poster {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 2);
+        }
+
+        #moviedata {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        #moviedata div {
+            background-color: white;
+            padding: 10px;
+            line-height: 25px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 2);
+        }
+
+        #moviedata img {
+            width: 100%;
+            height: 350px;
+            position: relative;
+        }
+
+        #moviedata span {
+            color: red;
+        }
+
+        #moviedata h1 {
+            justify-content: center;
+            color: red;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #moviedata h4 {
+            position: relative;
+            bottom: 10px;
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+
+        <div class="main">
+            <div class="navbar">
+                <span class="left">
+                    <span>OMDb API</span>
+                </span>
+                <span class="right">
+                    <input type="text" id="searchMovie" class="foo" placeholder=" Enter Movie Name">
+                    <button onclick="getMovie()">SEARCH</button>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="poster">
+            <div id="moviedata">
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    async function getMovie() {
+
+    try {
+
+    let myMovieName = document.getElementById("searchMovie").value
+    let myMovieInfo = document.getElementById("moviedata")
+
+
+    let res = await fetch(`http://www.omdbapi.com/?apikey=52cc6ed9&t=${myMovieName}`)
+    let data = await res.json();
+    console.log(Number(data.imdbRating));
+
+    if (Number(data.imdbRating) > 8.5 && data.Response == "True") {
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.src = data.Poster
+
+        let h4 = document.createElement("h4")
+        h4.innerHTML = "<span>RECOMMENDED</span>"
+
+        let h3 = document.createElement("h3")
+        h3.innerHTML = `<span>Title: </span>${data.Title}`
+
+        let p1 = document.createElement("p")
+        p1.innerHTML = `<span>Released: </span>${data.Released}`
+
+        let p2 = document.createElement("p")
+        p2.innerHTML = `<span>Year: </span>${data.Year}`
+
+        let p3 = document.createElement("p")
+        p3.innerHTML = `<span>imdbRating: </span>${data.imdbRating}`
+
+        let p4 = document.createElement("p")
+        p4.innerHTML = `<span>Language: </span>${data.Language}`
+
+        div.append(img)
+        div.append(h4)
+        div.append(h3)
+        div.append(p1)
+        div.append(p2)
+        div.append(p3)
+        div.append(p4)
+        myMovieInfo.append(div)
+
+    } else if (data.Response == "True") {
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.src = data.Poster
+
+        let h3 = document.createElement("h3")
+        h3.innerHTML = `<span>Title: </span>${data.Title}`
+
+        let p1 = document.createElement("p")
+        p1.innerHTML = `<span>Released: </span>${data.Released}`
+
+        let p2 = document.createElement("p")
+        p2.innerHTML = `<span>Year: </span>${data.Year}`
+
+        let p3 = document.createElement("p")
+        p3.innerHTML = `<span>imdbRating: </span>${data.imdbRating}`
+
+        let p4 = document.createElement("p")
+        p4.innerHTML = `<span>Language: </span>${data.Language}`
+
+        div.append(img)
+        div.append(h3)
+        div.append(p1)
+        div.append(p2)
+        div.append(p3)
+        div.append(p4)
+        myMovieInfo.append(div)
+
+    } else {
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.src = "https://www.zuloo.com/wp-content/themes/zuloo-v1/assets/images/anim.gif"
+
+        let h1 = document.createElement("h1")
+        h1.innerHTML = "NO DATA"
+
+        div.append(img)
+        div.append(h1)
+        myMovieInfo.append(div)
+    }
+
+    document.getElementById("searchMovie").value = null
+
+} catch (err) {
+    console.log('err:', err)
+}
+
+}
+</script>
