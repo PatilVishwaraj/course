@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tatkal booking system</title>
+  </head>
+  <body>
+    <button onclick="checkAvailability()">Check availability</button>
+  </body>
+  <script>
+    let BtoG = [ "Peter", "Tony", "T'challa", "Groot", "Shaktiman", "Batman", "Superman"];
+    let MtoG = [ "Peter", "Tony", "T'challa", "Groot", "Shaktiman", "Batman", "Superman"];
+    let PtoG = [ "Peter", "Tony", "T'challa", "Groot", "Shaktiman", "Batman", "Superman"];
+    async function checkAvailability() {
+      let Mypromise = new Promise(function (resolve, reject) {
+        if (BtoG.length === 4) {
+          resolve(`BtoG is available`);
+        } else if (MtoG.length === 4) {
+          resolve(`MtoG is available`);
+        } else if (PtoG.length === 4) {
+          resolve(`PtoG is available`);
+        }
+      });
+    }
+
+    function cancelTicket() {
+        let cancellingSpeed = Math.random
+    }
+  </script>
+</html>
