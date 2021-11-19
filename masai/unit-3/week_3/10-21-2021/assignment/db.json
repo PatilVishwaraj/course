@@ -1,0 +1,42 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Barry Alan",
+        "age": 30,
+        "active": true
+      },
+      {
+        "id": 2,
+        "name": "Bruce Wayne",
+        "age": 25,
+        "active": true
+      },
+      {
+        "id": 3,
+        "name": "Clark Kent",
+        "age": 45,
+        "active": false
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Vada-pav",
+        "price": 15,
+        "active": true
+      },
+      {
+        "id": 2,
+        "name": "Panipuri",
+        "price": 20,
+        "active": true
+      },
+      {
+        "id": 3,
+        "name": "Pav-bhaji",
+        "price": 50,
+        "active": false
+      }
+    ]
+  }

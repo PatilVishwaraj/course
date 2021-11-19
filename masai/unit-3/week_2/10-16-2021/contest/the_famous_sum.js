@@ -12,16 +12,19 @@ super_digit = (p) => {
 };
 
 function runProgram(input) {
-  var [n, k] = input.trim().split(" ").map(Number);
-  var p = String(n);
-  for (let i = 1; i < k; i++) {
-    p += n;
+  var [n, k] = input.trim().split(" ")
+  var p = 0;
+  for (let i = 0; i < n.length; i++) {
+    p += Number(n[i]);
   }
+    p*=k
+    p = String(p)
+  // console.log(p);
   console.log(super_digit(p));
 }
 
 if (process.env.USERNAME === `Admin`) {
-  runProgram(`123 3`);
+  runProgram(`148 3`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

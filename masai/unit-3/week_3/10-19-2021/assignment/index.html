@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Recipe app</title>
+    <style href="style.css"></style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Food App</div>
+      <ul>
+        <li>Home</li>
+        <li>Receipe of the day</li>
+        <li>Latest receipe</li>
+      </ul>
+    </div>
+    <input id="Search" type="text" />
+    <button id="btn_1" onclick="searchRecipe()">Search</button>
+  </body>
+</html>
+<script>
+  async function searchRecipe() {
+    let search = document.getElementById("Search").value;
+    let res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+    let data = await res.json()
+    return data.meals
+  }
+</script>

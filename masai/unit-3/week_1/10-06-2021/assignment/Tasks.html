@@ -35,17 +35,24 @@
         <input id="Task_ip" name="task" type="text" placeholder="Task">
         <button onclick="AddTask()">Add Task</button>
         <hr>
-        <div class="List">
+        <div id="List">
 
         </div>
     </div>
 </body>
 <script>
+    function taskTemplet(task) {
+        this.name=task
+    }
+
+
     function AddTask() {
         var task = document.getElementById("Task_ip").value
+        var new_task = new taskTemplet(task)
+        var task_list = document.createElement('li')
+        task_list.innerHTML=new_task.name
         var task_div = document.getElementById("List")
-        
-        
+        task_div.appendChild(task_list)
     }
 </script>
 </html>

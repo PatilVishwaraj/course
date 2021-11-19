@@ -1,8 +1,10 @@
-var nickHacsk = (rupee) => {
+nickHacsk = (rupee) => {
 if (rupee==1) {
-  return "Yes"
+  return true
+} else if (rupee<1) {
+  return false
 } else {
-  return "No"
+  return nickHacsk(rupee/10) || nickHacsk(rupee/20)
 }
 }
 
@@ -10,9 +12,14 @@ if (rupee==1) {
 function runProgram(input) {
   input = input.trim().split('\n').map(Number)
   var t = +input[0]
-  for (let i = 1; i < t; i++) {
+  for (let i = 1; i <= t; i++) {
     var n = +input[i]
-    console.log(nickHacsk(n))
+    var possible =nickHacsk(n)
+    if (possible) {
+      console.log("Yes")
+    } else {
+      console.log("No")
+    }
   }
 }
 
