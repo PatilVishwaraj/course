@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="Name" type="text"/>
+    <button onclick="Register()">Register</button>
+</body>
+    <script>
+        let queue = [1, 2, 3, 4]
+        function Register() {
+            var name = document.getElementById("Name").value;
+            queue.push(name)
+            let message = `${name} go stand in time`
+            alert(message)
+            let mypromise = new Promise(function(resolve, reject) {
+                let alert1 = setInterval(function () {
+                    if (queue[0]==name) {
+                    resolve(`${name} , you can go in.`)
+                    clearInterval(interval)
+                }
+                },1000)
+            })
+            mypromise.then(function (res) {
+                    alert(res)
+                    clearInterval(alert1)
+                
+            })
+            function getVaccinated() {
+                queue.shift()
+                if (queue.length===0) {
+                }
+                console.log(queue)
+            }
+            getVaccinated()
+            let interval = setInterval(getVaccinated,2000)
+        }
+    </script>
+</html>
