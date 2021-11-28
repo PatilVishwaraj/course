@@ -1,29 +1,19 @@
-super_digit = (p) => {
-  if (p.length == 1) {
-    return p;
+function findLength(str, curr) {
+  if (str[curr] === undefined) {
+    console.log(curr)
+    return;
   } else {
-    var sum = 0;
-    for (let i = 0; i < p.length; i++) {
-      sum += Number(p[i]);
-    }
-   sum = String(sum);
-    return super_digit(sum);
+    curr++;
+    findLength(str, curr);
   }
-};
-
-function runProgram(input) {
-  var [n, k] = input.trim().split(" ")
-  var p = 0;
-  for (let i = 0; i < n.length; i++) {
-    p += Number(n[i]);
-  }
-    p*=k
-    p = String(p)
-  console.log(super_digit(p));
 }
 
-if (process.env.USERNAME === `Admin`) {
-  runProgram(`148 3`);
+function runProgram(input) {
+  findLength(input, 0);
+}
+
+if (process.env.USERNAME === `PC`) {
+  runProgram(`masaischool`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

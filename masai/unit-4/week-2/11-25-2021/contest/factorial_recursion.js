@@ -1,29 +1,18 @@
-super_digit = (p) => {
-  if (p.length == 1) {
-    return p;
+function factorial(num) {
+  if (num == 1) {
+    return 1;
   } else {
-    var sum = 0;
-    for (let i = 0; i < p.length; i++) {
-      sum += Number(p[i]);
-    }
-   sum = String(sum);
-    return super_digit(sum);
+    return num * factorial(num - 1);
   }
-};
-
-function runProgram(input) {
-  var [n, k] = input.trim().split(" ")
-  var p = 0;
-  for (let i = 0; i < n.length; i++) {
-    p += Number(n[i]);
-  }
-    p*=k
-    p = String(p)
-  console.log(super_digit(p));
 }
 
-if (process.env.USERNAME === `Admin`) {
-  runProgram(`148 3`);
+function runProgram(input) {
+  input = +input;
+  console.log(factorial(input));
+}
+
+if (process.env.USERNAME === `PC`) {
+  runProgram(`5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

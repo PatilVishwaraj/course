@@ -1,29 +1,28 @@
-super_digit = (p) => {
-  if (p.length == 1) {
-    return p;
-  } else {
-    var sum = 0;
-    for (let i = 0; i < p.length; i++) {
-      sum += Number(p[i]);
+function decrypt(str) {
+  var ans = []
+  for (let j = 0; j < str.length; j++) {
+    if (str[j]=="#") {
+      ans.pop()
+    } else {
+      ans.push(str[j])
     }
-   sum = String(sum);
-    return super_digit(sum);
   }
-};
-
-function runProgram(input) {
-  var [n, k] = input.trim().split(" ")
-  var p = 0;
-  for (let i = 0; i < n.length; i++) {
-    p += Number(n[i]);
-  }
-    p*=k
-    p = String(p)
-  console.log(super_digit(p));
+  console.log(ans.join(''))
 }
 
-if (process.env.USERNAME === `Admin`) {
-  runProgram(`148 3`);
+function runProgram(input) {
+  input = input.trim().split('\n')
+  var tests = +input[0]
+  for (let i = 1; i <= tests; i++) {
+    let str = input[i].trim()
+    decrypt(str)
+  }
+}
+
+if (process.env.USERNAME === `PC`) {
+  runProgram(`2
+  ab#d
+  a#bc`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
