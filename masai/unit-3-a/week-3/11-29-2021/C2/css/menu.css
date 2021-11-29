@@ -1,0 +1,23 @@
+body {
+    font-family: sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: rgb(20, 20, 20);
+    font-family: sans-serif;
+}
+.list_card {
+    height: 200px;
+    width: 75%;
+    margin: auto;
+    border: 1px solid black;
+    display: flex;
+}
+.list_card > img {
+    margin: 10px 10px 10px auto;
+    width: 200px;
+}
+.addbtn {
+    height: 20px;
+}
