@@ -22,6 +22,7 @@ function search() {
         display.innerHTML = null
         meal.forEach(el => {
             let info = document.createElement('div')
+            info.className = "info"
             let name = document.createElement('h2')
             name.innerText = el.strMeal
             let addbtn = document.createElement('button')
