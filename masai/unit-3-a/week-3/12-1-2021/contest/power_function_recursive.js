@@ -1,4 +1,7 @@
 function recursivePowerFunc(A, B) {
+    if (B===0) {
+      return 1
+    }
     if (B===1) {
       return A
     }

@@ -1,10 +1,14 @@
 function runProgram(input) {
-    input = input.trim().split('\n').map(Number)
+    input = input.trim().split('\n')
+    let N = +input[0]
+    let arr = input[1].trim().split(' ').map(Number)
+    console.log(N, arr)
   
   }
   
   if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-    runProgram(``);
+    runProgram(`3
+    1 2 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding(`ascii`);

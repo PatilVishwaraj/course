@@ -1,10 +1,23 @@
 function runProgram(input) {
-    input = input.trim().split('\n').map(Number)
+    input = input.trim().split('\n')
+    for (let i = 0; i < 9; i++) {
+      input[i] = input[i].trim().split(' ').map(Number)
+      
+    }
+    console.log(input)
   
   }
   
   if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-    runProgram(``);
+    runProgram(`0 4 0 0 0 0 1 7 9 
+    0 0 2 0 0 8 0 5 4 
+    0 0 6 0 0 5 0 0 8 
+    0 8 0 0 7 0 9 1 0 
+    0 5 0 0 9 0 0 3 0 
+    0 1 9 0 6 0 0 4 0 
+    3 0 0 4 0 0 7 0 0 
+    5 7 0 1 0 0 2 0 0 
+    9 2 8 0 0 0 0 6 0`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding(`ascii`);
