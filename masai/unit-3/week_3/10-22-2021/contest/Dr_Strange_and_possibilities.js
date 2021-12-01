@@ -15,7 +15,7 @@ function runProgram(input) {
   findPossibilities(+input, [], 1)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+ if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`3`);
   } else {
     process.stdin.resume();

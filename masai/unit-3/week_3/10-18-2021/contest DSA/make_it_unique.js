@@ -14,7 +14,7 @@ function runProgram(input) {
     removeDuplicates(input)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+ if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`my name is ankush`);
   } else {
     process.stdin.resume();

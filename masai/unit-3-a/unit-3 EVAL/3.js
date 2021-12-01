@@ -19,7 +19,7 @@ function runProgram(input) {
     SNE(N, arr)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+ if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`5
     4 2 1 3 7`);
   } else {

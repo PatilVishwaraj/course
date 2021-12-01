@@ -1,6 +1,18 @@
+function recursivePowerFunc(A, B) {
+    if () {
+      
+    }  
+}
+
+
+
+
+
+
+
 function runProgram(input) {
-    input = input.trim().split('\n').map(Number)
-  
+    let [A, B] = input.trim().split(' ').map(Number)
+    console.log(A, B)
   }
   
   if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
