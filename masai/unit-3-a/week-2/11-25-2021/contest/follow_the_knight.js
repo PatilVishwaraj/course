@@ -42,7 +42,7 @@ function runProgram(input) {
 }
 
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`4 10 1`);
 } else {
   process.stdin.resume();

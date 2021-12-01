@@ -37,7 +37,7 @@ function runProgram(input) {
     swastikDiff(n, m, matrix)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(``);
 } else {
   process.stdin.resume();

@@ -15,10 +15,11 @@ function runProgram(input) {
   input = input.trim().split("\n");
   var n = +input[0];
   var str = input[1].trim().split("");
+  // console.log(n, str)
   generateSequence(str, [], 0);
 }
 
-if (process.env.USERNAME === `Admin`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`4
     abcd`);
 } else {

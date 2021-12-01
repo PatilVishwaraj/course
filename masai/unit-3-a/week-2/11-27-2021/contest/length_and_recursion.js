@@ -12,7 +12,7 @@ function runProgram(input) {
   findLength(input, 0);
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`masaischool`);
 } else {
   process.stdin.resume();

@@ -15,7 +15,7 @@ function runProgram(input) {
     count123(N, arr)
   }
   
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`10
     0 1 0 1 1 1 0 2 2 0 `);
   } else {

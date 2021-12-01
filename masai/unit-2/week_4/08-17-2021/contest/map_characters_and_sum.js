@@ -13,7 +13,7 @@ function runProgram(input) {
     console.log(ans)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`30
   3
   abc`);

@@ -25,7 +25,7 @@
     console.log(newStr(N, str));
   }
 
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`12
       abbabaadcbbc`);
   } else {

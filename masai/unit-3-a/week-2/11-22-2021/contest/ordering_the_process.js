@@ -30,7 +30,7 @@ function runProgram(input) {
   // console.log(N, arr1, arr_ideal)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`3
   3 2 1
   1 3 2`);

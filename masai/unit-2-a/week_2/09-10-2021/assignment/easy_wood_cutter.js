@@ -6,7 +6,7 @@ if (input%3==0) {
 }
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`6`);
 } else {
   process.stdin.resume();

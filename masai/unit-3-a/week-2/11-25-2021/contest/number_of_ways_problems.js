@@ -15,7 +15,7 @@ function runProgram(input) {
       console.log(sandhyaSteps(input))  
   }
   
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`4`);
   } else {
     process.stdin.resume();

@@ -11,7 +11,7 @@ function runProgram(input) {
     console.log(step-1)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`25`);
 } else {
   process.stdin.resume();

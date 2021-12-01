@@ -19,7 +19,7 @@ function runProgram(input) {
     }
   }
   
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`2
     5 31
     10 11 13 17 21

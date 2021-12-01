@@ -6,7 +6,7 @@ function runProgram(input) {
         console.log(ans)
     }
   }
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`5
     3 8 8
     9 5 7

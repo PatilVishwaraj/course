@@ -16,7 +16,7 @@ function runProgram(input) {
         APGP(n, r)
     }
 }
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`10
   76649417132192 374667
   59742775575410 156963

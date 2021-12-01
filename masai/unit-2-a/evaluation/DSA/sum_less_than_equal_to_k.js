@@ -15,7 +15,7 @@ function runProgram(input) {
     sumOfLessThanK(n, k, arr)
   }
   
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`4 2
     1 2 3 4`);
   } else {

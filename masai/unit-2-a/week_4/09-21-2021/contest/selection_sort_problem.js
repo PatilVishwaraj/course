@@ -16,7 +16,7 @@ for (let i = 0; i < n-1; i++) {
 console.log(arr.join(' '))
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`5
   3 5 0 9 8`);
 } else {

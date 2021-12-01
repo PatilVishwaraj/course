@@ -8,7 +8,7 @@ if (speed > 40) {
 }
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`100 2`);
 } else {
   process.stdin.resume();
