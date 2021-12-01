@@ -19,7 +19,7 @@ function runProgram(input) {
     console.log(sumEPowerToX(x, n).toFixed(4))
   }
   
- if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`4 2`);
   } else {
     process.stdin.resume();

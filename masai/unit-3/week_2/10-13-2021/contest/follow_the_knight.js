@@ -45,7 +45,7 @@ function runProgram(input) {
   console.log(count)
 }
 
-if (process.env.USERNAME === `Admin`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`4 10 1`);
 } else {
   process.stdin.resume();

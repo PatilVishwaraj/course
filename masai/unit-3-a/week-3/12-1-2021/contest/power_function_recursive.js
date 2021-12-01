@@ -1,18 +1,13 @@
 function recursivePowerFunc(A, B) {
-    if () {
-      
-    }  
+    if (B===1) {
+      return A
+    }
+    return A * recursivePowerFunc(A, B-1)
 }
-
-
-
-
-
-
 
 function runProgram(input) {
     let [A, B] = input.trim().split(' ').map(Number)
-    console.log(A, B)
+    console.log(recursivePowerFunc(A, B))
   }
   
   if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

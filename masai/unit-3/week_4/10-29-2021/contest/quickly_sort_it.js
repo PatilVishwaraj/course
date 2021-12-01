@@ -25,7 +25,7 @@ function runProgram(input) {
   console.log(quickSortReverse(arr).join(" "));
 }
 
-if (process.env.USERNAME === `Admin`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(``);
 } else {
   process.stdin.resume();

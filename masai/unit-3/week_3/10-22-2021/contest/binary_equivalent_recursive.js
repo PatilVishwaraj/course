@@ -19,7 +19,7 @@ function runProgram(input) {
     // convertBinary(2, "")
   }
   
- if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`3
     2
     15

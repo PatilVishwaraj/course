@@ -22,7 +22,7 @@ function runProgram(input) {
   console.log(count)
   }
   
- if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`3
     1 2 3`);
   } else {
