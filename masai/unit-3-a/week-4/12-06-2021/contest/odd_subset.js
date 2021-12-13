@@ -1,11 +1,12 @@
 var count = 0
 
-function findOddSubset(N, arr, sum, pointer) {
-  console.log('sum:', sum)
-  if (sum%2==1) {
-    count++
-  }
+function findOddSubset(N, arr, ans, pointer) {
+  // console.log('sum:', sum)
+  
   if (pointer>N) {
+    if (sum%2==1) {
+      count++
+    }
     return
   }
   for (let i = pointer; i < N; i++) {
@@ -20,9 +21,11 @@ function runProgram(input) {
     input = input.trim().split('\n')
     let N = +input[0]
     let arr = input[1].trim().split(' ')
+    let arr2 = 
     // .map(Number)
-    findOddSubset(N, arr, 0, 0)
-    console.log(count)
+    findOddSubset([], arr2, [], 0)
+    // findOddSubset(N, arr, 0, 0)
+    // console.log(count)
     // console.log(N, arr)
   }
   

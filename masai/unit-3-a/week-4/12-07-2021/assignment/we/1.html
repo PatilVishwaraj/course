@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div id="Register-form">
+            <form action="">
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <input type="text" id="username" placeholder="Username">
+                <input type="number" id="mobile" placeholder="Mobile">
+                <input type="text" id="description" placeholder="Description">
+            </form>
+            <button onclick="Register()">Sign-up</button>
+        </div>
+    </div>
+    <script>
+        // let url = https://masai-api-mocker.herokuapp.com/
+        async function Register() {
+            let signup_data = {
+                name: document.getElementById("name").value ,
+                email: document.getElementById("email").value ,
+                password: document.getElementById("password").value ,
+                username: document.getElementById("username").value ,
+                mobile: document.getElementById("mobile").value ,
+                description: document.getElementById("description").value
+            }
+        }
+
+        signup_data = JSON.stringify(signup_data)
+        console.log('signup_data:', signup_data)
+
+        let register_api = `https://masai-api-mocker.herokuapp.com/auth/register`
+
+        let response = await fetch(register_api, {
+            method: "POST", 
+            body: signup_data, 
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+
+        let data = await response.json()
+        console.log('data:', data)
+    </script>
+</body>
+</html>
