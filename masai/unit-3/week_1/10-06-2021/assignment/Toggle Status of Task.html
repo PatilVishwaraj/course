@@ -4,9 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tasks</title>
+    <style>
+        body {
+            background-color: lightseagreen;
+        }
+        #Hero {
+            width: 30%;
+            height: 500px;
+            padding: 20px;
+            margin: 100px auto;
+            background-color: burlywood;
+            border-radius: 10px;
+            border: 2px solid brown;
+        }
+        #Task_ip {
+            height: 30px;
+            width: 70%;
+            border: 2px solid rgb(0, 153, 255);
+        }
+        label {
+            font-size: x-large;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="Hero">
+        <label for="task">Enter new task here:</label><br>
+        <input id="Task_ip" name="task" type="text" placeholder="Task">
+        <button onclick="AddTask()">Add Task</button>
+        <hr>
+        <div id="List">
+
+        </div>
+    </div>
 </body>
+<script>
+    function taskTemplet(task) {
+        this.name=task
+    }
+
+
+    function AddTask() {
+        var task = document.getElementById("Task_ip").value
+        var new_task = new taskTemplet(task)
+        var task_list = document.createElement('li')
+        task_list.innerHTML=new_task.name
+        var tgl_btn = document.createElement("button")
+        tgl_btn.innerText = `Toggle`
+        var done_btn = document.createElement("button")
+        done_btn.innerText = `Done`
+        var remove_btn = document.createElement("button")
+        remove_btn.innerText = `Remove`
+        var task_div = document.getElementById("List")
+        task_div.appendChild(task_list)
+        task_div.append(tgl_btn)
+
+    }
+
+    function toggle(params) {
+        var status = document.getElementById(tesk)
+        if (status==true) {
+            status=false
+        } else {
+            status=true
+        }
+    }
+
+    function done() {
+        let text = button
+        if (true) {
+            div.innerHTML = null
+        } else {
+            div.innerHTML = task
+        }
+    }
+    
+    function remove() {
+        let text = button
+        if (true) {
+            div.innerHTML = null
+        } else {
+            div.innerHTML = task
+        }
+    }
+</script>
 </html>

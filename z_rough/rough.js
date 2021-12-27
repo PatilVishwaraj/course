@@ -39,3 +39,8 @@
 
 
 
+// console.log("1st:", ans)
+// console.log("2nd:", ans)
+// console.log("3rd:", ans)
+// console.log("4th:", ans)
+// console.log(mid)

@@ -1,27 +1,18 @@
-function SNE(N, arr) {
-  var stack = arr[N-1]
-  var count = 1
-  for (let i = N-2; i >= 0; i--) {
-    // console.log(i, stack, count)
-    if (stack>=arr[i]) {
-      count++
-      stack = arr[i]
-    }
-  }
-  console.log(count)
-}
-
-
 function runProgram(input) {
     input = input.trim().split('\n')
-    var N = +input[0]
-    var arr = input[1].trim().split(' ').map(Number)
-    SNE(N, arr)
+    let N = +input[0]
+    let str = input[1].trim()
+    if (str[0]=="a" || str[0]=="e" || str[0]=="i" || str[0]=="o" || str[0]=="u") {
+      str += "hulk" 
+    } else {
+      str += "thor"
+    }
+    console.log(str)
   }
   
   if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`5
-    4 2 1 3 7`);
+    abced`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding(`ascii`);
