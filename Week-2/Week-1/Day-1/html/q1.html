@@ -152,7 +152,7 @@
 </html>
 <script>
     async function getMovie() {
-
+    
     try {
 
     let myMovieName = document.getElementById("searchMovie").value
@@ -162,9 +162,9 @@
     let res = await fetch(`http://www.omdbapi.com/?apikey=52cc6ed9&t=${myMovieName}`)
     let data = await res.json();
     console.log(Number(data.imdbRating));
+        myMovieInfo.innerHTML = null
 
     if (Number(data.imdbRating) > 8.5 && data.Response == "True") {
-
         let div = document.createElement("div")
 
         let img = document.createElement("img")
@@ -219,10 +219,7 @@
         let p4 = document.createElement("p")
         p4.innerHTML = `<span>Language: </span>${data.Language}`
 
-        div.append(img)
-        div.append(h3)
-        div.append(p1)
-        div.append(p2)
+        div.append(img, h3, p1, p2)
         div.append(p3)
         div.append(p4)
         myMovieInfo.append(div)
