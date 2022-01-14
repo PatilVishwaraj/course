@@ -1,26 +1,25 @@
-function sandhyaSteps(steps) {
-  
-  if (steps == 0) {
-    return 1;
-  }
-  if (steps < 0) {
-    return 0;
-  } else {
-    return (
-      sandhyaSteps(steps - 1) +
-      sandhyaSteps(steps - 2) +
-      sandhyaSteps(steps - 3)
-    );
-  }
-}
+// Cure a disease
 
 function runProgram(input) {
-  input = +input;
-  console.log(sandhyaSteps(input));
+  input = input.trim().split("\n");
+  let N = +input[0]
+  let meds_arr = input[1].trim().split(" ").map(Number)
+  let patients_arr = input[2].trim().split(" ").map(Number)
+  meds_arr.sort((a, b) => a-b)
+  patients_arr.sort((a, b) => a-b)
+  let ans = "Yes"
+  for (let i = 0; i < N; i++) {
+    if (patients_arr[i]>=meds_arr[i]) {
+      ans = "No"
+    }
+  }
+  console.log(ans)
 }
 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4`);
+  runProgram(`5
+  41 56 12 45 89
+  10 10 10 10 10`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

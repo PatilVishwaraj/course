@@ -1,26 +1,30 @@
-function sandhyaSteps(steps) {
-  
-  if (steps == 0) {
-    return 1;
+// Even Count Returns
+
+function countEvenAfter(arr) {
+  let N = arr.length;
+  let count = 0;
+  let ans = [];
+  for (let i = 0; i < N; i++) {
+    if (arr[i] % 2 === 0) {
+      count++;
+    }
   }
-  if (steps < 0) {
-    return 0;
-  } else {
-    return (
-      sandhyaSteps(steps - 1) +
-      sandhyaSteps(steps - 2) +
-      sandhyaSteps(steps - 3)
-    );
+  for (let j = 0; j < N; j++) {
+    ans.push(count);
+    if (arr[j] % 2 === 0) {
+      count--;
+    }
   }
+  console.log(ans.join(" "));
 }
 
 function runProgram(input) {
-  input = +input;
-  console.log(sandhyaSteps(input));
+  input = input.trim().split("").map(Number);
+  countEvenAfter(input);
 }
 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4`);
+  runProgram(`574674546476`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

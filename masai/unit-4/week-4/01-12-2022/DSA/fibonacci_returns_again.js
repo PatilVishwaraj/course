@@ -1,26 +1,29 @@
-function sandhyaSteps(steps) {
-  
-  if (steps == 0) {
-    return 1;
-  }
-  if (steps < 0) {
-    return 0;
+// Fibonacci Returns Again
+
+function fibonacci(num) {
+  if (num <= 1) {
+    return num;
   } else {
-    return (
-      sandhyaSteps(steps - 1) +
-      sandhyaSteps(steps - 2) +
-      sandhyaSteps(steps - 3)
-    );
+    let i = 2;
+    let num1 = 0;
+    let num2 = 1;
+    while (i <= num) {
+      let num3 = num1 + num2;
+      i++;
+      num1 = num2;
+      num2 = num3;
+    }
+    console.log(num2);
   }
 }
 
 function runProgram(input) {
   input = +input;
-  console.log(sandhyaSteps(input));
+  fibonacci(input);
 }
 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4`);
+  runProgram(`5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
