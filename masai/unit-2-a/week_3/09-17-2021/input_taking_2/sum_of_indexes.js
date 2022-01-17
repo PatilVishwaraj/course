@@ -17,7 +17,7 @@ function runProgram(input) {
   sumOfIndex(n, m, matrix)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`3 2
   1 2
   3 4

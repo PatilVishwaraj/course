@@ -19,11 +19,10 @@ function runProgram(input) {
   }
     p*=k
     p = String(p)
-  // console.log(p);
   console.log(super_digit(p));
 }
 
-if (process.env.USERNAME === `Admin`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`148 3`);
 } else {
   process.stdin.resume();

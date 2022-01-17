@@ -20,7 +20,7 @@ function runProgram(input) {
   console.log(fastPower(a, b, mod)% mod);
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`10 20`);
 } else {
   process.stdin.resume();

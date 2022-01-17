@@ -10,7 +10,7 @@ for (let i = 0; i < Math.floor(N/2); i++) {
 console.log(ans)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`1221`);
 } else {
   process.stdin.resume();

@@ -11,7 +11,7 @@ function runProgram(input) {
   console.log(findLength(input, count))
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`masaischool`);
   } else {
     process.stdin.resume();

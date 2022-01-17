@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #Hero {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      #Hero > div {
+        margin-bottom: 50px;
+        text-align: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Hero"></div>
+
+    <script>
+      let url = "https://reqres.in/api/users?page=2";
+      let Hero = document.getElementById("Hero");
+
+      fetch(url)
+        .then(function (res) {
+          return res.json();
+        })
+
+        .then(function (res) {
+          const data = res.data;
+          appendProducts(data);
+          // console.log(data)
+        })
+
+        .catch(function (err) {
+          console.log(err);
+        });
+      function appendProducts(user_data) {
+        console.log(user_data);
+        user_data.forEach((user) => {
+          let div = document.createElement("div");
+          let image = document.createElement("img");
+          image.src = user.avatar;
+          let name = document.createElement("p");
+          name.innerText = `${user.first_name} ${user.last_name}`;
+          let email = document.createElement("p");
+          email.innerText = user.email;
+          div.append(image, name, email);
+
+          Hero.append(div);
+          console.log(user);
+          console.log();
+        });
+      }
+    </script>
+  </body>
+</html>

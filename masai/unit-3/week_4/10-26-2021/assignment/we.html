@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+        }
+        #Movies {
+            width: 206px;
+            height: 200px;
+            border: solid 1px black;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <input oninput="debounce(displayMovies, 1000)" type="text" id="Query">
+    <div id="Movies"></div>
+
+</body>
+</html>
+<script>
+    async function searchMovies() {
+        try {let name = document.getElementByI("Query").value
+            let response = await fetch(``)
+            let data = await response.json()
+            console.log(data)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    async function displayMovies() {
+        let movie_data = await searchMovies()
+
+        if (movie_data=== undefined) {
+            return false
+        }
+
+        console.log(movie_data)
+        movie_data.forEach(movie => {
+            
+        });
+    }
+
+    function debounce() {
+        
+    }
+</script>

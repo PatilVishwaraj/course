@@ -2,7 +2,7 @@ function runProgram(input) {
 console.log(10+(3*input))
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`3`);
 } else {
   process.stdin.resume();

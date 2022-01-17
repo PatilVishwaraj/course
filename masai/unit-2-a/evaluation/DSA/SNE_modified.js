@@ -24,7 +24,7 @@ function runProgram(input) {
     smallToLeft(n, arr)
   }
   
-  if (process.env.USERNAME === `PC`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`8
     39 27 11 4 24 32 32 1`);
   } else {

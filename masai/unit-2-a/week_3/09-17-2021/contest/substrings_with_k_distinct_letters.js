@@ -7,7 +7,7 @@ console.log(k)
 console.log(str)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`4 2
   abcc`);
 } else {

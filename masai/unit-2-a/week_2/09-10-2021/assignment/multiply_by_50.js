@@ -2,7 +2,7 @@ function runProgram(input) {
 console.log(input*50)
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2`);
 } else {
   process.stdin.resume();

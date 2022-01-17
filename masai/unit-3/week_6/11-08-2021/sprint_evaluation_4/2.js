@@ -26,7 +26,7 @@ function runProgram(input) {
     birthday(N, [], 1, K)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`4 2`);
   } else {
     process.stdin.resume();

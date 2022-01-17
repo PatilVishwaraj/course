@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <style>
+      #ShowVids {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="Search_ip" type="text" placeholder="" />
+    <button onclick="searchVid()">Search</button>
+    <div id="ShowVids"></div>
+    <script>
+      let key = "AIzaSyAE9x0BC_RdPaaJHN0PNUsZFlenxZz_Dfg";
+
+      async function searchVid() {
+        try {
+          let query = document.getElementById("Search_ip").value;
+          let url = `https://youtube.googleapis.com/youtube/v3/search?q=${query}&key=${key}`;
+
+          let res = await fetch(url);
+          let data = await res.json();
+
+          let arr_of_vids = data.items;
+          appendVids(arr_of_vids);
+        } catch {
+          console.log(err);
+        }
+      }
+      function appendVids(arr) {
+        arr.forEach(({ id: { videoiId } }) => {
+          console.log(videoiId) 
+          let div = document.createElement("div")
+
+          let iframe = document.createElement("iframe")
+          // iframe.src =  
+
+
+
+
+        });
+      }
+    </script>
+  </body>
+</html>
+
+<!-- key =  -->
+
+<!-- 
+GET  
+
+HTTP/1.1
+Authorization: Bearer [YOUR_ACCESS_TOKEN]
+Accept: application/json 
+-->

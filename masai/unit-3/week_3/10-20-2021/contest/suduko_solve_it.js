@@ -3,7 +3,7 @@ function runProgram(input) {
   
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(``);
   } else {
     process.stdin.resume();

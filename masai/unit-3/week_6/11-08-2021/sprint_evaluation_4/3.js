@@ -21,7 +21,7 @@ function runProgram(input) {
     solveEquation(N, arr)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`5
     1 2 3 4 5`);
   } else {

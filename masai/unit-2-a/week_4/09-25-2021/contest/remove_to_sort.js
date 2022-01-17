@@ -11,7 +11,7 @@ function runProgram(input) {
     console.log(array.join(" "))
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`10
   1 2 4 3 5 7 8 6 9 10`);
 } else {

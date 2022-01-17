@@ -9,7 +9,7 @@ function runProgram(input) {
   console.log(one + two * 2 + three * 3 + four * 3 + five * 2 + six * 2);
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`1 2 3 4 5 6`);
 } else {
   process.stdin.resume();

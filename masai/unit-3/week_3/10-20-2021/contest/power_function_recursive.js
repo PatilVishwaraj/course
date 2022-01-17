@@ -1,11 +1,11 @@
 function PowerAToB(a, b) {
   if (b==0) {
     return 1
-  } else if (b==1) {
-    return a
-  } else {
-    return PowerAToB(a, b-1)*a
   }
+  if (b==1) {
+    return a
+  }
+  return PowerAToB(a, b-1)*a
 }
 
 
@@ -14,7 +14,7 @@ function runProgram(input) {
     console.log(PowerAToB(a, b))
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`2 4`);
   } else {
     process.stdin.resume();

@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+}
+#Checkout_main {
+    width: 30%;
+    border-right: 10px;
+    border: 2px solid gray;
+    margin: 50px auto;
+    padding: 10px;  
+    text-align: center;
+}
+.address {
+    width: 80%;
+}

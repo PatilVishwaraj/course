@@ -14,7 +14,7 @@ for (let i = 1; i < input.length; i+=2) {
 }
 }
 
-if (process.env.USERNAME === `PC`) {
+if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`3
   2 1
   1 2

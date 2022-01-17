@@ -22,7 +22,7 @@ function runProgram(input) {
     recursiveBubbleSort(n, arr)
   }
   
-  if (process.env.USERNAME === `Admin`) {
+  if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
     runProgram(`5
     3 5 0 9 8`);
   } else {

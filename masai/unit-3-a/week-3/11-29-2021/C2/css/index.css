@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+}
+#Navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+}
+.login_option {
+    border: 1px solid blue;
+    background-color: cyan;
+    color: red;
+    font-weight: bolder;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.menu_link {
+    border: 1px solid blue;
+    background-color: cyan;
+    color: red;
+    border-radius: 10px;
+    font-weight: bolder;
+    width: 40%;
+    margin: auto;
+}
+.menu_option {
+    width: 100%;
+    text-align: center;
+}
+.options {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+.search {
+    display: flex;
+    width: 70%;
+}
+.home_link {
+    width: 8%;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    margin: auto;
+    background-color: yellow;
+}
+#Home {
+    text-align: center;
+    font-weight:bolder;
+    font-size: 20px;
+}
+#Display {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.card {
+    height: 350px;
+    margin: 10px;
+    text-align: center;
+}
+.card > img {
+    width: 90%;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+}
