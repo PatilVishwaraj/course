@@ -1,19 +1,26 @@
 // Decode the message
 function runProgram(input) {
   input = input.trim().split("");
-  console.log(input)
-  var count = 0
-  var Ans = 1
-  for (let i = 0; i < input.length-1; i++) {
-    if (input[i]===input[i+1]) {
-      count++
-    } else {
-      if (Ans>count) {
-        
+  if (input.length<1) {
+    Ans = 0
+  } else {
+    var count = 1   
+    var Ans = 1
+    for (let i = 0; i < input.length-1; i++) {
+      if (input[i]===input[i+1]) {
+        count++
+      } else {
+        if (Ans<count) {
+          Ans = count
+        }
+        count = 1
       }
     }
+    if (Ans<count) {
+      Ans = count
+    }
   }
-  console.log(count)
+  console.log(Ans) 
 }
 // Ans 3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
