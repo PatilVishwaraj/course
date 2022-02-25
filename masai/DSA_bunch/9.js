@@ -1,20 +1,11 @@
-// Compute Factorial A Modulus B
-function factorial(num) {
-  if (num==1) {
-    return 1
-  }
-  return factorial(num-1)*num
-}
-
+// 
 function runProgram(input) {
-  let [A, B] = input.trim().split("\n").map(Number);
-  // let X = (factorial(A)) % B
-  console.log(factorial(25))
+  input = input.trim().split("\n").map(Number);
+    
 }
-// Ans 5
+// Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`1
-  25 29`);
+  runProgram(``);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
