@@ -1,7 +1,7 @@
 // 
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
-    
+  
 }
 // Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
