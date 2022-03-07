@@ -1,21 +1,26 @@
-// Alan & Frequency
-function runProgram(input) {
-  input = input.trim().split("");
-  // let Ans = {a:0, b:0, c:0, d:0, e:0, f:0, g:0, h:0, i:0, j:0, k:0, l:0, m:0, n:0, o:0, p:0, q:0, r:0, s:0, t:0, u:0, v:0, w:0, x:0, y:0, z:0}
-  let result = {}
-  for (let i = 0; i < input.length; i++) {
-    Ans[input[i]]++
+// Number of ways problems Returns
+var dp = {}
+function sandhya(steps) {
+  if (steps==0) {
+    return 1
   }
-  // for (const key in Ans) {
-  //   if (Ans[key]>0) {
-      
-  //   }
-  // }
+  if (steps<0) {
+    return 0
+  }
+  if (dp[steps]) {
+    return dp[steps]
+  } else {
+    dp[steps] = sandhya(steps-1) + sandhya(steps-2) + sandhya(steps-3)
+    return dp[steps]
+  }
 }
-// Ans 
+function runProgram(input) {
+  let steps = +input;
+  console.log(sandhya(steps))
+}
+// Ans 7
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  aman`);
+  runProgram(`4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

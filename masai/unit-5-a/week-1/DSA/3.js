@@ -1,21 +1,23 @@
-// Alan & Frequency
-function runProgram(input) {
-  input = input.trim().split("");
-  // let Ans = {a:0, b:0, c:0, d:0, e:0, f:0, g:0, h:0, i:0, j:0, k:0, l:0, m:0, n:0, o:0, p:0, q:0, r:0, s:0, t:0, u:0, v:0, w:0, x:0, y:0, z:0}
-  let result = {}
-  for (let i = 0; i < input.length; i++) {
-    Ans[input[i]]++
+// Fibonacci Returns Again
+var fib = {0:0, 1:1}
+function fibonacci(num) {
+  if (num<2) {
+    return num
   }
-  // for (const key in Ans) {
-  //   if (Ans[key]>0) {
-      
-  //   }
-  // }
+  if (fib[num]) {
+    return fib[num]
+  } else {
+    fib[num] = fibonacci(num-1)+fibonacci(num-2)
+    return fib[num]
+  }
 }
-// Ans 
+function runProgram(input) {
+  input = +input;
+  console.log(fibonacci(+input))
+}
+// Ans 5
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  aman`);
+  runProgram(`6`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
