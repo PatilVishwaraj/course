@@ -1,26 +1,24 @@
-//
-function powerOfStr(N, str) {
-  let [x,y] = [0,0]
-  for (let i = 0; i < N; i++) {
-    if (str[i]==`a` || str[i]==`e` || str[i]==`i` || str[i]==`o` || str[i]==`u`) {
-      x++
-    } else {
-      y++
-    }
-  }
-  console.log(5*x + 2*y)
+// DpNation - is it a subsequence
+function DpNation(s1, s2) {
+  
 }
-
 function runProgram(input) {
   input = input.trim().split("\n");
-  let N = +input[0];
-  let str = input[1].trim();
-  powerOfStr(N, str);
+  let test = input[0]
+  for (let i = 1; i < test*2; i+=2) {
+    let s1 = input[i]
+    let s2 = input[i+1].trim().split("")
+    console.log(DpNation(s1, s2))
+  }
 }
-// Ans 14
+// Ans YES
+//     NO
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  aman`);
+  runProgram(`2
+  abc
+  adbce
+  ax
+  xaa`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

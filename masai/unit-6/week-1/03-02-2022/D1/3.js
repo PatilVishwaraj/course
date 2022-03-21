@@ -1,39 +1,38 @@
-function checkSum(arr, sum, curr) {
-  if (sum == 0) {
-    flag = "Yes"
-    return
-  } else if (curr == arr.length) {
-    return ;
+// Shop Soap
+function soap(num, N, arr) {
+  let count = 0
+  for (let i = 0; i < N; i++) {
+    if (arr[i]<num) {
+      count++
+    } else {
+      break
+    }
   }
-  for (let i = curr; i < arr.length; i++) {
-    sum -= arr[i]
-    checkSum(arr, sum, i + 1);
-    sum += arr[i]
-  }
+  console.log(count)
 }
-var flag
 function runProgram(input) {
   input = input.trim().split("\n");
-  let test = +input[0]
-  for (let i = 1; i < test*2; i+=2) {
-    flag = "NO"
-    var N = +input[i];
-    var arr = input[1+i].trim().split(" ").map(Number);
-    arr.sort((a,b) => a-b)
-    let sum = arr.pop()
-    checkSum(arr, sum, 0)
-    console.log(flag)
+  let N = +input[0]
+  let arr = input[1].trim().split(" ").map(Number)
+  arr.sort((a,b)=> a-b)
+  let Q = +input[2]
+  for (let i = 3; i < 3+Q; i++) {
+    let num = +input[i]
+    soap(num, N, arr)
   }
 }
-
+// Ans 1
+//     1
+//     2
+//     5
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
+  runProgram(`5
+  1 4 10 5 6
+  4
+  2
   3
-  1 2 3
-  4
-  0 1 2 3
-  4
-  2 3 6 10`);
+  5
+  11`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
