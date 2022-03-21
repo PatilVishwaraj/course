@@ -1,11 +1,28 @@
 // 
+var N
+function reverse(row) {
+  let temp = []
+  for (let i = N-1; i >= 0; i--) {
+    temp.push(row[i])
+  }
+  console.log(temp.join(" "))
+}
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
+  input = input.trim().split("\n");
+  N = +input[0]
+  for (let i = 1; i <= N; i++) {
+    let row = input[i].trim().split(" ").map(Number)
+    reverse(row)
+  }
     
 }
 // Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
