@@ -1,11 +1,18 @@
-// 
+// Remove duplicates (recursively)
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
     
 }
-// Ans 
+// Ans ay
+//     Empty String
+//     g
+//     a
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`4
+  azxxxzy
+  caaabbbaac
+  gghhg
+  aaaacddddcappp`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
