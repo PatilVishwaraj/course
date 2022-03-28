@@ -1,11 +1,21 @@
-// 
+// a and b only
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-    
+  let str = input.trim().split("");
+  let N =str.length
+  for (let i = 0; i < N; i++) {
+    if (str[i]==="?") {
+      if (str[i-1]==="a" || str[i+1]==="a") {
+        str[i] = "b"
+      } else {
+        str[i] = "a"
+      }
+    }
+  }
+  console.log(str.join(""))
 }
 // Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`?ba??b`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

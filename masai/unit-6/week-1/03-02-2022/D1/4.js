@@ -1,39 +1,42 @@
-function checkSum(arr, sum, curr) {
-  if (sum == 0) {
-    flag = "Yes"
-    return
-  } else if (curr == arr.length) {
-    return ;
+// Segregation of Odd & Even
+function SOE(N, arr, Q) {
+  var odd = []
+  var even = []
+  for (let i = 0; i < N; i++) {
+    if (arr[i]%2===0) {
+      even.push(arr[i])
+    } else {
+      odd.push(arr[i])
+    }
   }
-  for (let i = curr; i < arr.length; i++) {
-    sum -= arr[i]
-    checkSum(arr, sum, i + 1);
-    sum += arr[i]
-  }
-}
-var flag
-function runProgram(input) {
-  input = input.trim().split("\n");
-  let test = +input[0]
-  for (let i = 1; i < test*2; i+=2) {
-    flag = "NO"
-    var N = +input[i];
-    var arr = input[1+i].trim().split(" ").map(Number);
-    arr.sort((a,b) => a-b)
-    let sum = arr.pop()
-    checkSum(arr, sum, 0)
-    console.log(flag)
+  if (Q===1) {
+    console.log(even.join(" "),odd.join(" "))
+  } else if (Q===2) {
+    console.log(odd.join(" "),even.join(" "))
   }
 }
 
+
+function runProgram(input) {
+  input = input.trim().split("\n");
+  let test = +input[0]
+  for (let i = 1; i < test*3; i+=3) {
+    let N = +input[i]
+    let arr = input[i+1].trim().split(" ").map(Number)
+    let Q = +input[i+2]
+    SOE(N, arr, Q)
+  }
+}
+// Ans 2 4 1 3 5
+//     1 3 5 2 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  3
-  1 2 3
-  4
-  0 1 2 3
-  4
-  2 3 6 10`);
+  runProgram(`2
+  5
+  1 2 3 4 5
+  1
+  5
+  1 2 3 4 5
+  2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
