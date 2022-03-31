@@ -1,0 +1,34 @@
+{
+  "todoData": [
+    {
+      "title": "Sleep",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "Eat",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "code",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Learn",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "Gym",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "Walk",
+      "status": false,
+      "id": 6
+    }
+  ]
+}
