@@ -18,10 +18,6 @@ Project created to practice and keep as reference to work with redux
 #### How to use
 
 ```sh
-  $ git clone https://github.com/richardwlb/todo-redux.git
-```
-
-```sh
   # Dependencies
   $ yarn install
 
