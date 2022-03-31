@@ -1,0 +1,23 @@
+.card-wrapper {
+    display: flex;
+    border-style: solid;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-color: rgb(188, 192, 192);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 8;
+}
+
+.card-sidebar {
+    display: flex;
+    flex-grow: 1;
+    align-items: end;
+    justify-content: end;
+    margin: 0.5rem;
+}
