@@ -1,24 +1,11 @@
-// DpNation - is it a subsequence
-function DpNation(s1, s2) {
+// 
+function runProgram(input) {
+  input = input.trim().split("\n").map(Number);
   
 }
-function runProgram(input) {
-  input = input.trim().split("\n");
-  let test = input[0]
-  for (let i = 1; i < test*2; i+=2) {
-    let s1 = input[i]
-    let s2 = input[i+1].trim().split("")
-    console.log(DpNation(s1, s2))
-  }
-}
-// Ans YES
-//     NO
+// Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  abc
-  adbce
-  ax
-  xaa`);
+  runProgram(``);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
