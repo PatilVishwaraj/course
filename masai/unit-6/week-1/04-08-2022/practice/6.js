@@ -1,25 +1,16 @@
-// All Twice Except One
-function name(params) {
-  
-}
+// Detect Palindrome II
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
-  let tests = +input[0];
-  for (let i = 1; i < tests * 2; i += 2) {
-    let N = +input[i];
-    let arr = input[i + 1].trim().split(" ").map(Number);
-    console.log(rotate(N, K, arr));
-  }
   
 }
-// Ans 5
-//     3
+// Ans Possible!
+//     Not Possible!
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2
-  1
+  6
+  aabbcc
   5
-  5
-  1 2 1 3 2`);
+  aabcd`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
