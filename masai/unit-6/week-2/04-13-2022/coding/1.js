@@ -1,30 +1,11 @@
-// First unique character
-function findUnique(arr) {
-  let obj = {}
-  for (let i = 0; i < arr.length; i++) {
-    if (obj[arr[i]]) {
-      obj[arr[i]]++
-    } else {
-      obj[arr[i]] = 1
-    }
-  }
-  let letters = Object.keys(obj)
-  let counts = Object.values(obj)
-  for (let i = 0; i < counts.length; i++) {
-    if (counts[i]==1) {
-    return letters[i]
-    }
-  }
-  return "Not Found"
-}
+// 
 function runProgram(input) {
-  let arr = input.trim().split("");
-  console.log(findUnique(arr))
+  input = input.trim().split("\n").map(Number);
   
 }
-// Ans e
+// Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`racecars`);
+  runProgram(``);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
