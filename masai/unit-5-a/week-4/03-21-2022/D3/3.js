@@ -10,8 +10,6 @@ function findMissing(arr, left, right) {
   if (arr[mid]!==mid && arr[mid-1]==mid-1) {
     return mid
   }
-
-
   if (arr[mid]==mid) {
     return findMissing(arr, mid, right)
   } else {

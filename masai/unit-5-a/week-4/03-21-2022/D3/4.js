@@ -2,18 +2,22 @@
 var X
 function count(arr, left, right) {
   let mid = Math.floor((left+right)/2)
-  if (arr[right]==X) {
+  if (arr[mid]==X) {
     let counter = 0
-    for (let i = right; i > 0; i--) {
-      if (arr[i-1]==X) {
+    for (let i = mid+1; i <= right; i++) {
+      if (arr[i]==X) {
         counter++
-      }
-      
-      else {
+      } else {
         break
       }
     }
     return counter
+  }
+  if (arr[mid]<X) {
+    return count(arr, mid+1, right)
+  }
+  if (arr[mid]>X) {
+    return count(arr, left, mid)
   }
 }
 function runProgram(input) {
