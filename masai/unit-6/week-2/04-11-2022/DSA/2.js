@@ -1,11 +1,18 @@
-// 
+// Reverse Stack using Recursion
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 4
+//     3
+//     2
+//     1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`1
+  2
+  3
+  4
+  -1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
