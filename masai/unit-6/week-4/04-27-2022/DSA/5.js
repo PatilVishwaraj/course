@@ -1,12 +1,15 @@
-// Maximum Sum & Permutation
+// Nth node from the end
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 30
+// Ans 3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  2 5 1 6`);
+  runProgram(`3
+  1
+  2
+  3
+  1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

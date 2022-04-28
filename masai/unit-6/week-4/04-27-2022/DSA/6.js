@@ -1,12 +1,19 @@
-// Maximum Sum & Permutation
-function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+// Maximum Occurring Element
+function maximumOccuringElement(A,N){
+  for (let i = 0; i < N; i++) {
+    
+  }
 }
-// Ans 30
+function runProgram(input) {
+  input = input.trim().split("\n");
+  let N = +input[0]
+  let A = input[1].trim().split(" ").map(Number);
+  maximumOccuringElement(A,N)
+}
+// Ans 0
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  2 5 1 6`);
+  runProgram(`5
+  0 2 0 6 9`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

@@ -1,12 +1,16 @@
-// Maximum Sum & Permutation
+// Consecutive Even
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 30
+// Ans No
+//     Yes
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`4
-  2 5 1 6`);
+  runProgram(`2
+  3
+  1 2 3
+  5
+  1 2 4 6 8`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
