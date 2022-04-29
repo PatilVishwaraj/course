@@ -25,7 +25,7 @@ function traverseN(n, matrix) {
 function runProgram(input) {
     var array = input.trim().split("\n")
     for (let i = 1; i < array.length; i+=n+1) {
-        var n =  Number(array[i])
+        var n =  +array[i]
         var matrix = []
         for (let j = i+1; j <= i+n; j++) {
               var row = array[j].split(" ").map(Number)
@@ -37,7 +37,10 @@ function runProgram(input) {
   }
   
   if (process.env.USERNAME === 'PC') {
-    runProgram(`1\n2\n6 4\n3 5`);
+    runProgram(`1
+    2
+    6 4
+    3 5`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

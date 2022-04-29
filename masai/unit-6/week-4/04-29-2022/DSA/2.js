@@ -1,32 +1,32 @@
-// Faulty Direction
-function checkDirection(N, Arr) {
-  let vertical = 0
-  let horizontal = 0
-  for (let i = 0; i < N; i++) {
-    if (Arr[i]=="L") {
-      horizontal--
-    }else if (Arr[i]=="R") {
-      horizontal++
-    }else if (Arr[i]=="U") {
-      vertical++
-    }else if (Arr[i]=="D") {
-      vertical--
+// Is Even Sum Possible?
+function checkEvenSum(N, Arr) {
+  let sum = 0
+  let count = 0
+
+
+  var result = [];
+  result.push([]);
+
+  for (var i = 1; i < (1 << array.length); i++) {
+    var subset = 0;
+    for (var j = 0; j < array.length; j++) {
+      if (i & (1 << j))
+        subset.push(array[j]);
     }
+    result.push(subset);
   }
-  if (vertical===0 && horizontal===0) {
-    return "Yes"    
-  } else {
-    return "No"    
-  }
+
+  return result;
+
+
 }
 function runProgram(input) {
   input = input.trim().split("\n");
   let tests = +input[0]
   for (let i = 1; i < tests*2; i+=2) {
     let N = +input[i]
-    let Arr = input[i+1].trim().split("")
-    console.log(checkDirection(N, Arr))
-    
+    let Arr = input[i+1].trim().split(" ").map(Number)
+    console.log(checkEvenSum(N, Arr))
   }
   
 }
@@ -34,10 +34,10 @@ function runProgram(input) {
 //     Yes
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2
+  1
   5
-  RLRUD
   4
-  LRUD`);
+  1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
