@@ -1,37 +1,27 @@
-// Hire or No Hire
-function hire(N, salary, K) {
-  let sum = 0
+// Battle of Odd & Even
+function BattleOddEven(N, Arr) {
+  let oddsum = 0;
+  let evensum = 0;
   for (let i = 0; i < N; i++) {
-    sum += salary[i]
+    if (Arr[i] % 2) {
+      oddsum += Arr[i];
+    } else {
+      evensum += Arr[i];
+    }
   }
-  if (sum<=K) {
-    return "Hire"
-  } else {
-    return "No Hire"
-    
-  }
+  if (oddsum > evensum) return "Odd";
+  return "Even";
 }
 function runProgram(input) {
   input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests*3; i+=3) {
-    let N = +input[i]
-    let salary = input[i+1].trim().split(" ").map(Number)
-    let K = +input[i+2]
-    console.log(hire(N, salary, K))
-  }
-  
+  let N = +input[0];
+  let Arr = input[1].trim().split(" ").map(Number);
+  console.log(BattleOddEven(N, Arr));
 }
-// Ans Hire
-//     No Hire
+// Ans Even
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  5
-  1 2 3 4 5
-  15
-  5
-  1 2 3 4 5
-  10`);
+  runProgram(`4
+  1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

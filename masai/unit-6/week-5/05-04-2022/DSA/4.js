@@ -1,37 +1,34 @@
-// Hire or No Hire
-function hire(N, salary, K) {
-  let sum = 0
+// Counting Occurences of Digits 2
+function countingOccurences(N,Arr) {
+  let obj = { 9:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 0:0 }
   for (let i = 0; i < N; i++) {
-    sum += salary[i]
+    obj[Arr[i]]++
   }
-  if (sum<=K) {
-    return "Hire"
-  } else {
-    return "No Hire"
-    
+  let res = ""
+  for (let j = 9; j > 0; j--) {
+    res = res + obj[j] + " "
   }
+  res = res +  obj[0]
+  return res
 }
 function runProgram(input) {
   input = input.trim().split("\n");
   let tests = +input[0]
-  for (let i = 1; i < tests*3; i+=3) {
+  for (let i = 1; i < tests*2; i+=2) {
     let N = +input[i]
-    let salary = input[i+1].trim().split(" ").map(Number)
-    let K = +input[i+2]
-    console.log(hire(N, salary, K))
+    let Arr = input[i+1].trim().split("").map(Number)
+    console.log(countingOccurences(N,Arr))
   }
   
 }
-// Ans Hire
-//     No Hire
+// Ans 0 0 0 0 0 0 1 2 2 0
+//     0 0 0 0 2 1 1 2 0 0
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2
   5
-  1 2 3 4 5
-  15
-  5
-  1 2 3 4 5
-  10`);
+  21321
+  6
+  235452`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

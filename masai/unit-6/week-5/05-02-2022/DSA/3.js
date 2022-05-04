@@ -1,37 +1,30 @@
-// Hire or No Hire
-function hire(N, salary, K) {
-  let sum = 0
-  for (let i = 0; i < N; i++) {
-    sum += salary[i]
+// Square root of an Integer
+function findSqRoot(num) {
+  let square = 1,
+    i = 0;
+  while (true) {
+    i++;
+    square = (num / square + square) / 2;
+    if (i == num + 1) break;
   }
-  if (sum<=K) {
-    return "Hire"
-  } else {
-    return "No Hire"
-    
-  }
+  return square;
 }
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests*3; i+=3) {
-    let N = +input[i]
-    let salary = input[i+1].trim().split(" ").map(Number)
-    let K = +input[i+2]
-    console.log(hire(N, salary, K))
+  input = input.trim().split("\n").map(Number);
+  let N = input[0];
+  for (let i = 1; i <= N; i++) {
+    let num = input[i];
+    let Ans = findSqRoot(num) + "";
+    Ans = Ans.trim().split(".").map(Number)
+    console.log(Ans[0]);
   }
-  
 }
-// Ans Hire
-//     No Hire
+// Ans 2
+//     2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2
-  5
-  1 2 3 4 5
-  15
-  5
-  1 2 3 4 5
-  10`);
+  04
+  59`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

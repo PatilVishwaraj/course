@@ -1,37 +1,21 @@
-// Hire or No Hire
-function hire(N, salary, K) {
-  let sum = 0
-  for (let i = 0; i < N; i++) {
-    sum += salary[i]
-  }
-  if (sum<=K) {
-    return "Hire"
-  } else {
-    return "No Hire"
-    
-  }
+// Ways to zero
+function ways(num) {
+  if (num<0) return 0
+  if (num==0) return 1
+  return ways(num-1) + ways(num-2) + ways(num-5)
 }
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests*3; i+=3) {
-    let N = +input[i]
-    let salary = input[i+1].trim().split(" ").map(Number)
-    let K = +input[i+2]
-    console.log(hire(N, salary, K))
+  input = input.trim().split("\n").map(Number);
+  let N = +input[0]
+  for (let i = 1; i <= N; i++) {
+    let num = +input[i]
+    console.log(ways(num))
   }
-  
 }
-// Ans Hire
-//     No Hire
+// Ans 5
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  5
-  1 2 3 4 5
-  15
-  5
-  1 2 3 4 5
-  10`);
+  runProgram(`1
+  4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
