@@ -1,11 +1,19 @@
-// 
+// Check duplicate
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans NO
+//     YES
+//     NO
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`3
+  1
+  1
+  2
+  1 1
+  3
+  1 2 3`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

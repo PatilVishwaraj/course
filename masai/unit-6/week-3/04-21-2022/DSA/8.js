@@ -1,7 +1,16 @@
 // Intersection of Array
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  var data = input.split("\n");
+  var n = Number(data[0]);
+  var array1 = data[1].split(" ").map(Number);
+  var array2 = data[2].split(" ").map(Number);
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      if (array1[i] == array2[j]) {
+        console.log(array1[i]);
+      }
+    }
+  }
 }
 // Ans 5
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

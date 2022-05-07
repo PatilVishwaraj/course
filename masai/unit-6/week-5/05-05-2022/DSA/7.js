@@ -1,11 +1,16 @@
-// 
+// Famous String Interleaving Problem
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split("\n");
+  let str_A = input[0].trim().split("")
+  let str_B = input[1].trim().split("")
+  let str_C = input[2
+  ].trim().split("")
 }
-// Ans 
+// Ans Yes
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`abcd
+  xyz
+  axybczd`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
