@@ -17,7 +17,6 @@ function rotateMatrix(N, Matrix) {
       Matrix[j][rigth] = Matrix[j-1][rigth]
     }
     for (let j = rigth; j > left+1; j--) {
-      // console.log(Matrix[top][j], Matrix[top][j-1])
       Matrix[top][j] = Matrix[top][j-1]
     }
     Matrix[i][i+1] = temp

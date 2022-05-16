@@ -1,23 +1,12 @@
-// Fibonacci Returns Again
-var fib = { 0: 0, 1: 1 };
-function fibonacci(num) {
-  if (num < 2) {
-    return num;
-  }
-  if (fib[num]) {
-    return fib[num];
-  } else {
-    fib[num] = fibonacci(num - 1) + fibonacci(num - 2);
-    return fib[num];
-  }
-}
+// Power of 4
 function runProgram(input) {
-  input = +input;
-  console.log(fibonacci(+input));
+  let num = +input;
+  let Ans = num**4
+  console.log(Ans)
 }
-// Ans 5
+// Ans 81
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6`);
+  runProgram(`3`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

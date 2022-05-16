@@ -1,23 +1,13 @@
-// Fibonacci Returns Again
-var fib = { 0: 0, 1: 1 };
-function fibonacci(num) {
-  if (num < 2) {
-    return num;
-  }
-  if (fib[num]) {
-    return fib[num];
-  } else {
-    fib[num] = fibonacci(num - 1) + fibonacci(num - 2);
-    return fib[num];
-  }
-}
+// Gas Station
 function runProgram(input) {
-  input = +input;
-  console.log(fibonacci(+input));
+  input = input.trim().split("\n").map(Number);
+  
 }
-// Ans 5
+// Ans 3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6`);
+  runProgram(`5
+  1 2 3 4 5
+  3 4 5 1 2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

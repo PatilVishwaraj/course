@@ -1,42 +1,35 @@
-// Spirals and Diagonals
-function spiralDiagonal(N, Arr) {
-  if (N==1) {
-    return Arr[0]
+// The Peak Point
+function findPeak(Arr, low, high) {
+  let mid = Math.floor((low+high)/2)
+  if (Arr[mid]>Arr[mid-1] && Arr[mid]>Arr[mid+1]) {
+    return mid
   }
-  let i = 1;
-  let j = N;
-  let sum = 0
-  while (i <= (N * N)) {
-    if (i==j) {
-      sum += Arr[i-1]
-    } else {
-      sum += Arr[i-1] + Arr[j-1]
-    }
-    i += N + 1;
-    j += N - 1;
+  if (Arr[mid]>Arr[mid-1] && Arr[mid]<Arr[mid+1]) {
+    return findPeak(Arr, mid, high)
   }
-  return sum
+  if (Arr[mid]<=Arr[mid-1] && Arr[mid]>Arr[mid+1]) {
+    return findPeak(Arr, low, mid)
+  }
+
 }
 function runProgram(input) {
   input = input.trim().split("\n");
-  let tests = +input[0];
-  for (let i = 1; i < tests * 2; i += 2) {
-    let N = +input[i];
-    let Arr = input[i + 1].trim().split(" ").map(Number);
-     console.log(spiralDiagonal(N, Arr));
+  let test = +input[0]
+  for (let i = 1; i < test*2; i+=2) {
+    let N = +input[i]
+    let Arr = input[i+1].trim().split(" ").map(Number)
+    console.log(findPeak(Arr, 0, N-1))
   }
+  
 }
 // Ans 1
-//     10
-//     25
+//     2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  1 2 3 4
+  runProgram(`2
   3
-  1 2 3 4 5 6 7 8 9`);
+  10 20 11
+  5
+  1 3 6 5 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

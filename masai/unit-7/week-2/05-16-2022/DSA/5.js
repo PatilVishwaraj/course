@@ -1,23 +1,20 @@
-// Fibonacci Returns Again
-var fib = { 0: 0, 1: 1 };
-function fibonacci(num) {
-  if (num < 2) {
-    return num;
+// Number of ways problems Returns
+var ans = {};
+function ways(num) {
+  if (num < 0) return 0;
+  if (num == 0) return 1;
+  if (ans[num] == undefined) {
+    ans[num] = ways(num - 1) + ways(num - 2) + ways(num - 3);
   }
-  if (fib[num]) {
-    return fib[num];
-  } else {
-    fib[num] = fibonacci(num - 1) + fibonacci(num - 2);
-    return fib[num];
-  }
+  return ans[num];
 }
 function runProgram(input) {
-  input = +input;
-  console.log(fibonacci(+input));
+  num = +input;
+  console.log(ways(num));
 }
-// Ans 5
+// Ans 7
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6`);
+  runProgram(`4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
