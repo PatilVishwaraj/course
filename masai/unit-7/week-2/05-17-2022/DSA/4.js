@@ -1,11 +1,12 @@
-// 
+// Check if Sorted and rotated using binary search
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans YES
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`6
+  3 4 7 9 1 2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

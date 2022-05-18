@@ -1,11 +1,14 @@
-// 
+// Implement GCD
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 3
+//     1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`2
+  6 9
+  2 25`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

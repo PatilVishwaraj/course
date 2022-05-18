@@ -1,11 +1,17 @@
-// 
+// Linked List Cycle
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans false
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`1
+  3
+  1
+  2
+  3
+  -1
+  `);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

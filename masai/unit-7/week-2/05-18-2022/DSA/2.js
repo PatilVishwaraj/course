@@ -1,11 +1,17 @@
-// 
+// Remove Maximum Element In Linked List
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 1 2 3 4 5
+//     1 2 3 4
+//     1 2 3
+//     1 2
+//     1
+//     -1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`5
+  1 2 3 4 5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

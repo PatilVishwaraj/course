@@ -1,11 +1,21 @@
-// 
+// Detective L
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 1 4 7 8 9 2 5 6 3 
+//     1 4 7 10 11 12 2 5 8 9 3 6 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`2
+  3 3
+  1 2 3
+  4 5 6
+  7 8 9
+  4 3
+  1 2 3
+  4 5 6
+  7 8 9
+  10 11 12`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

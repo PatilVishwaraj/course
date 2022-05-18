@@ -1,11 +1,16 @@
-// 
+// 2D Array and Phrase
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`5 5
+  safer
+  amjad
+  babol
+  aaron
+  songs`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
