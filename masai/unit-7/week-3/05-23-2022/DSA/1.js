@@ -1,18 +1,23 @@
-// Unique Gift
+// Party or Not
 function runProgram(input) {
   input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests; i++) {
-    let Arr = input.trim().split("")
+  let [N, C, R] = input[0].trim().split(" ").map(Number)
+  let Arr = input[1].trim().split(" ").map(Number)
+  Arr.sort((a,b) =>a-b)
+  let sum = 0
+  for (let i = 0; i < C; i++) {
+    sum += Arr[i]
   }
-  
+  if (sum<=R) {
+    console.log("Party")
+  } else {
+    console.log("Sad")
+  }
 }
-// Ans aabbdd
-//     aaabc#
+// Ans Party
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  abadbc
-  abcabc`);
+  runProgram(`5 3 24
+  6 4 21 20 13`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

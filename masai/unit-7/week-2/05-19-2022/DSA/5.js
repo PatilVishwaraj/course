@@ -1,11 +1,17 @@
-// 
+// Masai Coding Competition
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 1 1
+//     1 2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`5
+  E 1 1
+  E 2 1
+  E 1 2
+  D
+  D`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

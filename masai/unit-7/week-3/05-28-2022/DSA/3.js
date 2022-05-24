@@ -1,18 +1,11 @@
-// Unique Gift
+// 
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests; i++) {
-    let Arr = input.trim().split("")
-  }
+  input = input.trim().split("\n").map(Number);
   
 }
-// Ans aabbdd
-//     aaabc#
+// Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  abadbc
-  abcabc`);
+  runProgram(``);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

@@ -1,7 +1,18 @@
 // Number of Occurences in logn
+function key(N, K, Arr){
+  var count=0
+  for(var i=0;i<N;i++){
+      if(Arr[i]===K){
+         count++
+      }
+  }
+return count
+}
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split("\n");
+  let [N, K] = input[0].trim().split(" ").map(Number)
+  let Arr = input[1].trim().split(" ").map(Number)
+  console.log(key(N,K,Arr))
 }
 // Ans 3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

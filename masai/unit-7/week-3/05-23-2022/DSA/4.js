@@ -1,18 +1,18 @@
-// Unique Gift
+// Rotate Elements
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let tests = +input[0]
-  for (let i = 1; i < tests; i++) {
-    let Arr = input.trim().split("")
-  }
+  input = input.trim().split("\n").map(Number);
   
 }
-// Ans aabbdd
-//     aaabc#
+// Ans 1 1 2 3
+//     1 2 2 4
+//     1 3 3 4
+//     2 3 4 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  abadbc
-  abcabc`);
+  runProgram(`4
+  1 2 3 4
+  1 2 3 4
+  1 2 3 4
+  1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
