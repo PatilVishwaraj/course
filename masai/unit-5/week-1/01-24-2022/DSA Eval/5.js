@@ -1,38 +1,33 @@
 // Detective L
-function traverseL(N, M, matrix) {
-  let ans = []
-  let col = 0
-  let row = 0
-  while (col>M && row>N) {
-    
+function traverseL(row, col, matrix) {
+  let Ans = [];
+  let r1 = 0;
+  let c1 = 0;
+  for (let i = 0; i < col; i++) {
+    for (let j = 0; j < array.length; j++) {
+      const element = array[j];
+    }
   }
-  console.log(ans)
 }
 
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let tests = +input[0]
-  let i = 1
+  input = input.trim().split('\n');
+  let tests = +input[0];
+  let i = 1;
   for (let z = 0; z < tests; z++) {
-    let [N, M] = input[i].trim().split(" ").map(Number);
-    let matrix = []
-    for (var j = i+1; j <= i+N; j++) {
-      matrix.push(input[j].trim().split(" ").map(Number))
+    let [row, col] = input[i].trim().split(' ').map(Number);
+    let matrix = [];
+    for (var j = i + 1; j <= i + N; j++) {
+      matrix.push(input[j].trim().split(' ').map(Number));
     }
     // console.log(N, M, matrix)
-    i=j
-    traverseL(N, M, matrix)
+    i = j;
+    traverseL(N, M, matrix);
   }
-  let matrix = []
 }
-//  ans 1 4 7 8 9 2 5 6 3 
-//      1 4 7 10 11 12 2 5 8 9 3 6 
+//  ans 1 4 7 10 11 12 2 5 8 9 3 6
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`2
-  3 3
-  1 2 3
-  4 5 6
-  7 8 9
+  runProgram(`1
   4 3
   1 2 3
   4 5 6

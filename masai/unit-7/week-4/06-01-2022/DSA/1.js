@@ -1,18 +1,31 @@
-// Merge two Linked Lists
-function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+// Generate all substrings
+function GenerateAllSubstrings(N, str, Ans) {
+  if ((str = '')) {
+  }
 }
-// Ans 1 1 2 2 3 4 5
+function runProgram(input) {
+  input = input.trim().split('\n');
+  let tests = +input[0];
+  for (let i = 0; i < tests * 2; i += 2) {
+    let N = +input[i];
+    let str = input[i + 1].trim().split('');
+    GenerateAllSubstrings(N, str, '');
+  }
+}
+// Ans a
+//     am
+//     ama
+//     aman
+//     m
+//     ma
+//     man
+//     a
+//     an
+//     n
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
-  3
-  4
-  5`);
+  runProgram(`1
+  4 
+  aman`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

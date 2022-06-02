@@ -1,36 +1,40 @@
-// Where do I Fit
-function findPlace(K, Arr) {
-  let N = Arr.length;
-  if (K < Arr[0]) {
-    return 'Front ' + Arr[0];
-  } else if (K > Arr[N - 1]) {
-    return Arr[N - 1] + ' Last';
-  } else {
-    for (let i = 0; i < N - 1; i++) {
-      i;
-    }
+// Generate all subsequence
+function generateSequence(str, ans, curr) {
+  if (ans.length > 0) {
+    console.log(ans.join(''));
+  } else if (curr == str.length) {
+    return;
+  }
+  for (let i = curr; i < str.length; i++) {
+    ans.push(str[i]);
+    generateSequence(str, ans, i + 1);
+    ans.pop();
   }
 }
 function runProgram(input) {
   input = input.trim().split('\n');
-  let tests = +input[0];
-  for (let i = 1; i < tests * 2; i += 2) {
-    let K = +input[i];
-    let Arr = input[i + 1].trim().split(' ').map(Number);
-    console.log(findPlace(N, Arr));
-  }
+  var n = +input[0];
+  var str = input[1].trim().split('');
+  generateSequence(str, [], 0);
 }
-// Ans 1 4
-//     2 6
-//     Front 2
+// Ans a
+//     ab
+//     abc
+//     abcd
+//     abd
+//     ac
+//     acd
+//     ad
+//     b
+//     bc
+//     bcd
+//     bd
+//     c
+//     cd
+//     d
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  3
-  1 4 5 6 8 9
-  5 
-  1 2 6 7 8
-  1
-  2 3 4 5 6`);
+  runProgram(`4
+  abcd`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

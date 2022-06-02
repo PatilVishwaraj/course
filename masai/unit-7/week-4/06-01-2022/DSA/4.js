@@ -1,18 +1,15 @@
-// Merge two Linked Lists
+// Odd Sum in Rows
 function runProgram(input) {
   input = input.trim().split('\n').map(Number);
 }
-// Ans 1 1 2 2 3 4 5
+// Ans 4
+//     5
+//     16
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
-  3
-  4
-  5`);
+  runProgram(`3 3
+  1 2 3
+  4 5 6
+  7 8 9`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

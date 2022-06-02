@@ -1,18 +1,12 @@
-// Merge two Linked Lists
+// GP & Recursion
+function GP(N, K) {}
 function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+  let [N, K] = input.trim().split(' ').map(Number);
+  console.log(GP(N, K));
 }
-// Ans 1 1 2 2 3 4 5
+// Ans 1.2480
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
-  3
-  4
-  5`);
+  runProgram(`3 5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

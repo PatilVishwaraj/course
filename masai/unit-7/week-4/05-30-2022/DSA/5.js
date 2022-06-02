@@ -1,18 +1,16 @@
-// Merge two Linked Lists
+// Manage stacks of bricks
 function runProgram(input) {
   input = input.trim().split('\n').map(Number);
 }
-// Ans 1 1 2 2 3 4 5
+// Ans 10
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
+  runProgram(`1
   3
+  6
   4
-  5`);
+  3 1
+  1 2
+  1 2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

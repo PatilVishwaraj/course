@@ -1,18 +1,22 @@
-// Merge two Linked Lists
-function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+// Implement GCD
+function GCD(A, B) {
+  if (A == 0) return B;
+  return GCD(B % A, A);
 }
-// Ans 1 1 2 2 3 4 5
+function runProgram(input) {
+  input = input.trim().split('\n');
+  let N = +input[0];
+  for (let i = 1; i <= N; i++) {
+    let [A, B] = input[i].trim().split(' ').map(Number);
+    console.log(GCD(A, B));
+  }
+}
+// Ans 3
+//     1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
-  3
-  4
-  5`);
+  runProgram(`2
+  6 9
+  2 25`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

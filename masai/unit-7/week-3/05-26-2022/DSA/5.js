@@ -1,11 +1,18 @@
-// 
+// National Award Ceremony
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans 2
+//     0 1 2
+//     0 1 2 2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`3
+  1
+  2
+  3
+  2 0 1
+  4
+  2 0 2 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

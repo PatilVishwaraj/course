@@ -1,18 +1,15 @@
-// Merge two Linked Lists
+// Decipher String
 function runProgram(input) {
   input = input.trim().split('\n').map(Number);
 }
-// Ans 1 1 2 2 3 4 5
+// Ans aabcc
+//     aazaa
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`3
-  1
-  1
-  2
-  4
-  2
-  3
-  4
-  5`);
+  runProgram(`2
+  6
+  a2b1c2
+  6
+  a2z1a2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

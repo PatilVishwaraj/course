@@ -1,11 +1,18 @@
-// 
+// Is it Triangle ?
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans No
+//     No
+//     Yes
+//     Yes
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`4
+  4 5 13
+  7 1 8
+  2 5 4
+  2 2 2
+  `);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
