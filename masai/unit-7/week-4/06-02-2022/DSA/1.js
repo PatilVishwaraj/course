@@ -1,23 +1,17 @@
 // Opp Quick Sort
-function oppQuickSort(Arr) {
-  let N = Arr.length;
-  if (N <= 1) return Arr;
-  let Left = [];
-  let Right = [];
-  let Pointer = Arr.pop();
-  for (let i = 0; i < Arr.length; i++) {
-    if (Arr[i] > Pointer) {
-      Right.push(Arr[i]);
-    } else {
-      Left.push(Arr[i]);
-    }
-  }
-  return oppQuickSort(Right).concat(Pointer, oppQuickSort(Left));
+function mySwap(A, B) {
+  let temp = Arr[A];
+  Arr[A] = Arr[B];
+  Arr[B] = temp;
 }
+function findPivot(left, right) {
+  // let
+}
+function oppQuickSort(N, Arr) {}
 function runProgram(input) {
   input = input.trim().split('\n');
   let Arr = input[1].trim().split(' ').map(Number);
-  console.log(oppQuickSort(Arr).join(' '));
+  console.log(oppQuickSort(N, Arr).join(' '));
 }
 // Ans 5 4 3 2 1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

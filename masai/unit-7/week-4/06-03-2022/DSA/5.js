@@ -1,11 +1,11 @@
-// 
+// Array Parts of Four
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans 50
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`8
+  1 2 3 4 5 6 7 8`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

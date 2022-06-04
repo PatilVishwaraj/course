@@ -1,11 +1,11 @@
-// 
+// Element in the middle
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans 6
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`5
+  4 3 6 7 8`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
