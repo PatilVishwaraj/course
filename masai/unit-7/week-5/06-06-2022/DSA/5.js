@@ -1,13 +1,18 @@
-// Number of Occurences in logn
+// National Award Ceremony
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 3
+// Ans 2
+//     0 1 2
+//     0 1 2 2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`3
+  1
+  2
+  3
+  2 0 1
+  4
+  2 0 2 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

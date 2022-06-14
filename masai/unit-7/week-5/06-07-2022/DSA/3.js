@@ -1,13 +1,15 @@
-// Number of Occurences in logn
+// Stone age game I
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 3
+// Ans 100
+//     0
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`2
+  5
+  100 8 97 2 1
+  5
+  100 9 96 2 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

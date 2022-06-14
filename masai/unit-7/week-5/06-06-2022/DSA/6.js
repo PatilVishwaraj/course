@@ -1,13 +1,22 @@
-// Number of Occurences in logn
+// Product and Sum in Array
+function sumOfProducts(N, arr) {
+  let sum = 0;
+  for (let i = 0; i < N; i++) {
+    let prod = arr[i] * (i + 1);
+    sum += prod;
+  }
+  return sum;
+}
 function runProgram(input) {
   input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  let N = +input[0];
+  let arr = input[1].trim().split(' ').map(Number);
+  console.log(sumOfProducts(N, arr));
 }
-// Ans 3
+// Ans 88
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`5
+  2 5 4 6 8`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

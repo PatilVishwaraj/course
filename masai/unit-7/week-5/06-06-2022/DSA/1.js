@@ -1,13 +1,30 @@
-// Number of Occurences in logn
+// Majority element
+function findMajority(N, Arr) {
+  let count = 0;
+  for (let i = 0; i < N - X; i++) {
+    if (Arr[i] == Arr[i + X]) {
+      count++;
+    }
+  }
+  return count;
+}
 function runProgram(input) {
   input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  let tests = +input[0];
+  for (let i = 1; i < tests * 2; i += 2) {
+    let N = +input[i];
+    let Arr = input[i + 1].trim().split(' ').map(Number);
+    console.log(findMajority(N, Arr));
+  }
 }
-// Ans 3
+// Ans 1
+//     -1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`2
+  9
+  4 10 2 8 4 7 5 4 4
+  4
+  3 9 3 7`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

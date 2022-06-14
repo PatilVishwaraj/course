@@ -1,13 +1,17 @@
-// Number of Occurences in logn
+// Segregation of Odd & Even
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 3
+// Ans 2 4 1 3 5
+//     1 3 5 2 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`2
+  5
+  1 2 3 4 5
+  1
+  5
+  1 2 3 4 5
+  2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

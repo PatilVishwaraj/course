@@ -1,13 +1,11 @@
-// Number of Occurences in logn
+// Count triplets
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 3
+// Ans 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`4 3
+  1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

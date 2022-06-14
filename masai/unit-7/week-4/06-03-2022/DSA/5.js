@@ -1,6 +1,8 @@
 // Array Parts of Four
 function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+  input = input.trim().split('\n');
+  let N = +input[0];
+  let Arr = input[1].trim().split(' ').map(Number);
 }
 // Ans 50
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

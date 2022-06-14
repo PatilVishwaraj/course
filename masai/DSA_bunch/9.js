@@ -1,11 +1,13 @@
-// 
+// Avoiding Stranger
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-    
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans 1
+//     2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`2
+  1 2
+  1 -1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

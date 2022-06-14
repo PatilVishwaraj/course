@@ -1,13 +1,11 @@
-// Number of Occurences in logn
+// 
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  input = input.trim().split("\n").map(Number);
+  
 }
-// Ans 3
+// Ans 
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(``);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

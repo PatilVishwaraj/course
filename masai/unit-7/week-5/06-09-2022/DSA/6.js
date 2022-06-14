@@ -1,13 +1,20 @@
-// Number of Occurences in logn
+// Fibonacci-Recursion
+var dp = {};
+function fib(num) {
+  if (num < 0) return -1;
+  if (num <= 1) return num;
+  if (dp[num] == undefined) {
+    dp[num] = fib(num - 1) + fib(num - 2);
+  }
+  return dp[num];
+}
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+  num = +input;
+  console.log(fib(num));
 }
 // Ans 3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

@@ -1,13 +1,29 @@
-// Number of Occurences in logn
-function runProgram(input) {
-  input = input.trim().split('\n');
-  let [] = input[0].trim().split(' ').map(Number);
-  let Arr = input[1].trim().split(' ').map(Number);
+// Reverse the Linked List
+function reverse(head) {
+  let prev = null;
+  let curr = head;
+  let next = null;
+  while (curr != null) {
+    next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+  }
+  head = prev;
+  return head;
 }
-// Ans 3
+function runProgram(input) {
+  input = input.trim().split('\n').map(Number);
+}
+// Ans 5 4 3 2 1
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`6 3
-  2 3 3 3 6 9`);
+  runProgram(`1
+  5
+  1
+  2
+  3
+  4
+  5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
