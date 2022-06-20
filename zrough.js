@@ -1,27 +1,22 @@
 function isPrime(num) {
-
-    if (num === 2) {
-      return true;
-    } else if (num > 1) {
-      for (var i = 2; i < num; i++) {
-  
-        if (num % i !== 0) {
-          return true;
-        } else if (num === i * i) {
-          return false
-        } else {
-          return false;
-        }
+  if (num === 2) return true;
+  if (num > 1) {
+    for (var i = 2; i < num; i++) {
+      if (num % i !== 0) {
+        return true;
+      } else if (num === i * i) {
+        return false;
+      } else {
+        return false;
       }
-    } else {
-      return false;
     }
-  
+  } else {
+    return false;
   }
-
+}
 
 for (let i = 0; i < 50; i++) {
-    if (isPrime(i)) {
-        console.log(i)
-    }
+  if (isPrime(i)) {
+    console.log(i);
+  }
 }
