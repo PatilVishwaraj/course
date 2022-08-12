@@ -1,46 +1,26 @@
-// function newUser(event) {
-//     event.preventDefault();
-//     let user
-//     let name = document.getElementById("name").value;
-//     let phone = document.getElementById("phone").value;
-//     let mail = document.getElementById("email").value;
-//     let pass = document.getElementById("password").value;
-
-//     if (name.length === 0 || phone.length === 0 || mail.length === 0 || pass.length === 0) {
-//         alert("Fill all the detail!");
-//     } else {
-//         if (user.length === 0) {
-//             user.push({name: name, phone: phone, email: mail, password: pass});
-
-//             let addData = JSON.stringify(user);
-//             localStorage.setItem("Users", addData);
-//         } else {
-//             let receiveData = localStorage.getItem("Users");
-//             let users = JSON.parse(receiveData);
-//             let check = 0;
-//             for (let i = 0; i < users.length; i++) {
-//                 if (Object.values(users[i])[2] === mail || Object.values(users[i])[1] === phone) {
-//                     check++;
-//                 } 
-//             }
-//             if (check > 0) {
-//                 alert("User already exist. Please Login!");
-//             } else {
-//                 user.push({name: name, phone: phone, email: mail, password: pass});
-//                 let addData = JSON.stringify(user);
-//                 localStorage.setItem("Users", addData);
-//             }
-//         }
-//     }
-// }
-
-
-
-
-
-
-// console.log("1st:", ans)
-// console.log("2nd:", ans)
-// console.log("3rd:", ans)
-// console.log("4th:", ans)
-// console.log(mid)
+var arr1 = [1, 3, 8, 9];
+var arr2 = [2, 4, 5, 6, 7];
+function sortMerge(arr1, arr2) {
+  let a = 0;
+  let b = 0;
+  let N1 = arr1.length;
+  let N2 = arr2.length;
+  let Ans = [];
+  while (a < N1 || b < N2) {
+    if (a == N1 && b < N2) {
+      Ans.push(arr2[b]);
+      b++;
+    } else if (b == N2 && a < N1) {
+      Ans.push(arr1[a]);
+      a++;
+    } else if (arr1[a] < arr2[b]) {
+      Ans.push(arr1[a]);
+      a++;
+    } else if (arr2[b] < arr1[a]) {
+      Ans.push(arr2[b]);
+      b++;
+    }
+  }
+  console.log(Ans);
+}
+sortMerge(arr1, arr2);
