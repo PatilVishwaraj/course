@@ -1,11 +1,13 @@
-// 
+// Dance Night!
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-    
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 
+// Ans YES
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`1
+  4 5
+  2 5 6 8
+  3 8 5 1 7`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
