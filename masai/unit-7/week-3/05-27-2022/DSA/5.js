@@ -7,7 +7,9 @@ function findPlace(K, Arr) {
     return Arr[N - 1] + ' Last';
   } else {
     for (let i = 0; i < N - 1; i++) {
-      i;
+      if (Arr[i] < K && K < Arr[i + 1]) {
+        return Arr[i] + ' ' + Arr[i + 1];
+      }
     }
   }
 }
@@ -17,7 +19,7 @@ function runProgram(input) {
   for (let i = 1; i < tests * 2; i += 2) {
     let K = +input[i];
     let Arr = input[i + 1].trim().split(' ').map(Number);
-    console.log(findPlace(N, Arr));
+    console.log(findPlace(K, Arr));
   }
 }
 // Ans 1 4
