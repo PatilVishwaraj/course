@@ -1,6 +1,7 @@
 // Prime Loop Check
 function primeLoopCheck(num) {
-  // Write code here
+  if (num < 2) return 0;
+  let ocu;
 }
 function runProgram(input) {
   num = +input;

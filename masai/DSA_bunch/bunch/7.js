@@ -1,22 +1,21 @@
 // 3D Array
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let [x, y, z] = input[0].trim().split(" ").map(Number)
-  let array = input[1].trim().split(" ").map(Number)
-  let N = x*y*z
-  let count = 0
-  let row = []
-  let rowlength = 0
-  while (count<N) {
-    row.push(array[count])
-    if (count%y) {
-      
+  input = input.trim().split('\n');
+  let [x, y, z] = input[0].trim().split(' ').map(Number);
+  let array = input[1].trim().split(' ').map(Number);
+  let N = x * y * z;
+  let count = 0;
+  let row = [];
+  let rowlength = 0;
+  while (count < N) {
+    row.push(array[count]);
+    if (count % y) {
     }
-    console.log(row.join(" "))
-    count++
+    console.log(row.join(' '));
+    count++;
   }
 }
-// Ans 
+// Ans
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`2 2 2
   1 2 3 4 5 6 7 8`);

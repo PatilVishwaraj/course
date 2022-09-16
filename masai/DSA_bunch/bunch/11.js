@@ -1,11 +1,23 @@
-// 
+// ACM ICPC India Rank
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-    
+  input = input.trim().split('\n');
+  let N = +input[0];
+  for (let i = 0; i <= N; i++) {
+    input[i] = input[i].trim();
+    if (input[i] === 'India') {
+      console.log(i);
+      break;
+    }
+  }
 }
-// Ans 
+// Ans 5
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`5
+  Russia
+  USA
+  Japan
+  China
+  India`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

@@ -1,27 +1,15 @@
-// Bubble Sort Problem
-function solve(N, arr) {
-  for (let i = 0; i < N; i++) {
-    for (let j = 0; j < N - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-  }
-  console.log(arr.join(' '));
-  return;
-}
+// Consecutive ones
 function runProgram(input) {
-  input = input.trim().split('\n');
-  let N = +input[0];
-  let arr = input[1].trim().split(' ').map(Number);
-  console.log(solve(N, arr));
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 0 3 5 8 9
+// Ans 5
+//     3
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`5
-  3 5 0 9 8`);
+  runProgram(`2
+  12 2
+  011001001010
+  3 3
+  000`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

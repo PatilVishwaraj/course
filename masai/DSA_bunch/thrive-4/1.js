@@ -1,27 +1,27 @@
-// Bubble Sort Problem
-function solve(N, arr) {
+// Compete with Neighbour
+function CWN(N, arr) {
+  let count = 0;
   for (let i = 0; i < N; i++) {
-    for (let j = 0; j < N - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
+    if (i == 0 && arr[i] > arr[i + 1]) {
+      count++;
+    } else if (i == N - 1 && arr[i] > arr[i - 1]) {
+      count++;
+    } else if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+      count++;
     }
   }
-  console.log(arr.join(' '));
-  return;
+  return count;
 }
 function runProgram(input) {
   input = input.trim().split('\n');
   let N = +input[0];
   let arr = input[1].trim().split(' ').map(Number);
-  console.log(solve(N, arr));
+  console.log(CWN(N, arr));
 }
-// Ans 0 3 5 8 9
+// Ans 2
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`5
-  3 5 0 9 8`);
+  runProgram(`8
+  1 2 3 4 2 1 6 5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

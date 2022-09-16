@@ -1,6 +1,19 @@
 // Rotate the array - easy version
+function rotateTheArray(N, K, arr) {
+  let R = K % N;
+  let part1 = arr.slice(0, N - R);
+  let part2 = arr.slice(N - R);
+  let result = part2.concat(part1);
+  return result.join(' ');
+}
 function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+  input = input.trim().split('\n');
+  let tests = +input[0];
+  for (let i = 1; i < tests * 2; i += 2) {
+    let [N, K] = input[i].trim().split(' ').map(Number);
+    let arr = input[i + 1].trim().split(' ').map(Number);
+    console.log(rotateTheArray(N, K, arr));
+  }
 }
 // Ans 3 1 2
 //     1 2
