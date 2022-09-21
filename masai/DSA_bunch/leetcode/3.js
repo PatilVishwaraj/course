@@ -1,10 +1,33 @@
-//
-function runProgram(input) {
-  input = input.trim().split('\n').map(Number);
+// Valid Parentheses
+function runProgram(s) {
+  let stack = [];
+  for (let i = 0; i < s.length; i++) {
+    console.log(stack);
+    let end = stack.pop();
+    if (s[i] == `(` || s[i] == `[` || s[i] == `{`) {
+      stack.push(s[i]);
+    } else if (s[i] == `)` && end !== `(`) {
+      console.log(false);
+      return;
+    } else if (s[i] == `]` && end !== `[`) {
+      console.log(false);
+      return;
+    } else if (s[i] == `}` && end !== `{`) {
+      console.log(false);
+      return;
+    }
+  }
+  if (stack.length == 0) {
+    console.log(true);
+    return;
+  } else {
+    console.log(false);
+    return;
+  }
 }
-// Ans
+// Ans true
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`"{[]}"`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
