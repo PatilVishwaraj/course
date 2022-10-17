@@ -1,24 +1,23 @@
 // Array Parts of Four
 function ans(N, arr) {
-  let M = N/4
-  let c1 = 0
-  let c2 = 0
-  let c3 = 0
-  let c4 = 0
+  let M = N / 4;
+  let c1 = 0;
+  let c2 = 0;
+  let c3 = 0;
+  let c4 = 0;
   for (let i = 0; i < M; i++) {
-    c1 += arr[i]
-    c2 += arr[M+i]
-    c3 += arr[(2*M)+i]
-    c4 += arr[(3*M)+i]
+    c1 += arr[i];
+    c2 += arr[M + i];
+    c3 += arr[2 * M + i];
+    c4 += arr[3 * M + i];
   }
-  let res = (2*c1)+c2+(2*c3)+c4
-  return res
+  return 2 * c1 + c2 + 2 * c3 + c4;
 }
 function runProgram(input) {
-  input = input.trim().split("\n");
-  let N = +input[0]
-  let arr = input[1].trim().split(" ").map(Number)
-  console.log(ans(N, arr))
+  input = input.trim().split('\n');
+  let N = +input[0];
+  let arr = input[1].trim().split(' ').map(Number);
+  console.log(ans(N, arr));
 }
 // Ans 50
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {

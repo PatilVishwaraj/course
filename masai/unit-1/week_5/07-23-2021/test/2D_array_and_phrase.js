@@ -1,7 +1,9 @@
 function checkProduct(row, col, target, matrix) {
+  console.log(matrix)
   var count = 0
   for (let r1 = 0; r1 < row; r1++) {
       for (let c1 = 0; c1 < col-3; c1++) {
+        console.log(matrix[r1][c1])
           if (matrix[r1][c1]+matrix[r1][c1+1]+matrix[r1][c1+2]+matrix[r1][c1+3]==target) {
               count++
           }
@@ -45,7 +47,12 @@ function runProgram(input) {
   }
   
   if (process.env.USERNAME === 'PC') {
-    runProgram(`5 5\nsafer\namjad\nbabol\naaron\nsongs`);
+    runProgram(`5 5
+    safer
+    amjad
+    babol
+    aaron
+    songs`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

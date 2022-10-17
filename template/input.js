@@ -1,7 +1,5 @@
 function runProgram(input){
-    var newInput = input.split(" ");
-    var a = Number(newInput[0]);
-    var b = Number(newInput[1]);
+   
 }
 process.stdin.resume();
 process.stdin.setEncoding("ascii");

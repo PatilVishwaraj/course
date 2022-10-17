@@ -9,25 +9,22 @@ function spiralTraverse4(N, matrix) {
     var bottom = N-1
     var ans = []
     for (let i = 0; i < Math.ceil(N/2); i++) {
-        for (let j = top; j <= bottom; j++) {
-            ans.push(matrix[j][left])
-        }
-        left++
         for (let j = left; j <= right; j++) {
-            ans.push(matrix[bottom][j])
-            
+            ans.push(matrix[top][j])
         }
-        bottom--
-        for (let j = bottom; j >= top; j--) {
+        top++
+        for (let j = top; j <= bottom; j++) {
             ans.push(matrix[j][right])
-            
         }
         right--
         for (let j = right; j >= left; j--) {
-            ans.push(matrix[top][j])
-            
+            ans.push(matrix[bottom][j])
         }
-        top++
+        bottom--
+        for (let j = bottom; j >= top; j--) {
+            ans.push(matrix[j][left])
+        }
+        left++
     }
     console.log(ans.join(' '))
 }

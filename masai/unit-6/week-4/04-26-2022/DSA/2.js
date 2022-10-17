@@ -1,12 +1,11 @@
 // Equilibrium Element
 function runProgram(input) {
-  input = input.trim().split("\n").map(Number);
-  
+  input = input.trim().split('\n').map(Number);
 }
-// Ans 3
+// Ans
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
   runProgram(`5
-  3 3 5 5 1`);
+  3 3 5 5 1 `);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

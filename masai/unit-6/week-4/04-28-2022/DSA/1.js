@@ -1,11 +1,12 @@
-// 
+// Maximum Sum & Permutation
 function runProgram(input) {
   input = input.trim().split("\n").map(Number);
   
 }
-// Ans 
+// Ans 30
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(``);
+  runProgram(`4
+  2 5 1 6`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
