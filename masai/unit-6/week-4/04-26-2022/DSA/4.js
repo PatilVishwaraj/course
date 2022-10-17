@@ -1,30 +1,18 @@
-// Decode the message
+// Rotate Elements
 function runProgram(input) {
-  input = input.trim().split('');
-  if (input.length < 1) {
-    Ans = 0;
-  } else {
-    var count = 1;
-    var Ans = 1;
-    for (let i = 0; i < input.length - 1; i++) {
-      if (input[i] === input[i + 1]) {
-        count++;
-      } else {
-        if (Ans < count) {
-          Ans = count;
-        }
-        count = 1;
-      }
-    }
-    if (Ans < count) {
-      Ans = count;
-    }
-  }
-  console.log(Ans);
+  input = input.trim().split("\n").map(Number);
+  
 }
-// Ans 3
+// Ans 1 1 2 3
+//     1 2 2 4
+//     1 3 3 4
+//     2 3 4 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`ATTCGGGA`);
+  runProgram(`4
+  1 2 3 4
+  1 2 3 4
+  1 2 3 4
+  1 2 3 4`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);

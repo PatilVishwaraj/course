@@ -1,30 +1,14 @@
-// Decode the message
+// Two Sorted Arrays
 function runProgram(input) {
-  input = input.trim().split('');
-  if (input.length < 1) {
-    Ans = 0;
-  } else {
-    var count = 1;
-    var Ans = 1;
-    for (let i = 0; i < input.length - 1; i++) {
-      if (input[i] === input[i + 1]) {
-        count++;
-      } else {
-        if (Ans < count) {
-          Ans = count;
-        }
-        count = 1;
-      }
-    }
-    if (Ans < count) {
-      Ans = count;
-    }
-  }
-  console.log(Ans);
+  input = input.trim().split("\n").map(Number);
+  
 }
-// Ans 3
+// Ans 4
 if (process.env.USERNAME === `PC` || process.env.USERNAME === `Admin`) {
-  runProgram(`ATTCGGGA`);
+  runProgram(`1
+  6
+  1 2 2 3 4 5
+  4 4 3 2 1 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding(`ascii`);
